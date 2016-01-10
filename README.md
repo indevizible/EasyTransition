@@ -95,7 +95,8 @@ transition?.direction = [.Top,.Right]
 And more on EasyTransitionExample.xcodeproj
 
 ## Sources Used
-Background Images: www.subtlepatterns.com 
+Background Images: www.subtlepatterns.com
+
 [Alamofire](https://github.com/Alamofire/Alamofire) for Cocoapods and Carthage description
 
 ## The MIT License (MIT)
