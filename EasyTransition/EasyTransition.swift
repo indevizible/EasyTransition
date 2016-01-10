@@ -56,7 +56,7 @@ public class EasyTransition: UIPercentDrivenInteractiveTransition {
     
     private var isPresentation : Bool = false
     
-    init(attachedViewController: UIViewController) {
+    public init(attachedViewController: UIViewController) {
         super.init()
         
         self.attachedViewController = attachedViewController
