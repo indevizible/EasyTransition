@@ -1,5 +1,6 @@
 # EasyTransition
 [![Cocoapods Compatible](https://img.shields.io/cocoapods/v/EasyTransition.svg)](https://img.shields.io/cocoapods/v/EasyTransition.svg)
+[![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![GitHub license](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/indevizible/EasyTransition/master/LICENSE)
 [![Platform](https://img.shields.io/cocoapods/p/EasyTransition.svg?style=flat)](http://cocoadocs.org/docsets/EasyTransition)
 [![Twitter](https://img.shields.io/badge/twitter-@indevizible-blue.svg?style=flat)](http://twitter.com/indevizible)
@@ -49,6 +50,24 @@ Then, run the following command:
 $ pod install
 ```
 
+### Carthage
+
+[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks.
+
+You can install Carthage with [Homebrew](http://brew.sh/) using the following command:
+
+```bash
+$ brew update
+$ brew install carthage
+```
+
+To integrate Alamofire into your Xcode project using Carthage, specify it in your `Cartfile`:
+
+```ogdl
+github "indevizible/EasyTransition" ~> 1.0
+```
+
+Run `carthage update` to build the framework and drag the built `EasyTransition.framework` into your Xcode project.
 
 ## Usage
 Import and declare EasyTransition:
@@ -77,6 +96,7 @@ And more on EasyTransitionExample.xcodeproj
 
 ## Sources Used
 Background Images: www.subtlepatterns.com 
+[Alamofire](https://github.com/Alamofire/Alamofire) for Cocoapods and Carthage description
 
 ## The MIT License (MIT)
 
