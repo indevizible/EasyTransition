@@ -1,6 +1,7 @@
 # EasyTransition
 EasyTransition is a simple library for make a transition in iOS.
 
+![example](https://raw.githubusercontent.com/indevizible/EasyTransition/master/EasyTransition.gif)
 ## Features
 - [x] Transition from corners
 - [x] Interactive dismissal transition
