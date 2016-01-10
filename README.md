@@ -1,5 +1,6 @@
 # EasyTransition
 [![Cocoapods Compatible](https://img.shields.io/cocoapods/v/EasyTransition.svg)](https://img.shields.io/cocoapods/v/EasyTransition.svg)
+[![GitHub license](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/indevizible/EasyTransition/master/LICENSE)
 [![Platform](https://img.shields.io/cocoapods/p/EasyTransition.svg?style=flat)](http://cocoadocs.org/docsets/EasyTransition)
 [![Twitter](https://img.shields.io/badge/twitter-@indevizible-blue.svg?style=flat)](http://twitter.com/indevizible)
 
