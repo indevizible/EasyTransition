@@ -1,4 +1,6 @@
 # EasyTransition
+[![Cocoapods Compatible](https://img.shields.io/cocoapods/v/EasyTransition.svg)](https://img.shields.io/cocoapods/v/EasyTransition.svg)  
+
 EasyTransition is a simple library for make a transition in iOS.
 
 ![example](https://raw.githubusercontent.com/indevizible/EasyTransition/master/EasyTransition.gif)
@@ -10,7 +12,36 @@ EasyTransition is a simple library for make a transition in iOS.
 Swift 2 or later
 
 ##  Installation
--
+You can install this library in 2 ways
+
+### Manually
+
+Copy this [file](EasyTransition/EasyTransition.swift) to your project and give me some beer.
+
+### CocoaPods
+
+[CocoaPods](http://cocoapods.org) is a dependency manager for Cocoa projects. You can install it with the following command:
+
+```bash
+$ gem install cocoapods
+```
+
+To integrate EasyTransition into your Xcode project using CocoaPods, specify it in your `Podfile`:
+
+```ruby
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '8.0'
+use_frameworks!
+
+pod 'EasyTransition', '~> 1.0'
+```
+
+Then, run the following command:
+
+```bash
+$ pod install
+```
+
 
 ## Usage
 Import and declare EasyTransition:
