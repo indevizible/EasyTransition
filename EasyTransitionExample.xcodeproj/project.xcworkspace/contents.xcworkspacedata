@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:EasyTransition.xcodeproj">
+      location = "self:/Users/indevizible/WorkSpace/EasyTransition/EasyTransitionExample.xcodeproj">
    </FileRef>
 </Workspace>

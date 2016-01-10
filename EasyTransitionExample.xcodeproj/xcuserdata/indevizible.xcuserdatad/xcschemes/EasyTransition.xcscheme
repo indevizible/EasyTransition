@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "90A1B04B1C42720D00D80957"
-               BuildableName = "EasyTransition.app"
-               BlueprintName = "EasyTransition"
-               ReferencedContainer = "container:EasyTransition.xcodeproj">
+               BuildableName = "EasyTransitionExample.app"
+               BlueprintName = "EasyTransitionExample"
+               ReferencedContainer = "container:EasyTransitionExample.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "90A1B04B1C42720D00D80957"
-            BuildableName = "EasyTransition.app"
-            BlueprintName = "EasyTransition"
-            ReferencedContainer = "container:EasyTransition.xcodeproj">
+            BuildableName = "EasyTransitionExample.app"
+            BlueprintName = "EasyTransitionExample"
+            ReferencedContainer = "container:EasyTransitionExample.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "90A1B04B1C42720D00D80957"
-            BuildableName = "EasyTransition.app"
-            BlueprintName = "EasyTransition"
-            ReferencedContainer = "container:EasyTransition.xcodeproj">
+            BuildableName = "EasyTransitionExample.app"
+            BlueprintName = "EasyTransitionExample"
+            ReferencedContainer = "container:EasyTransitionExample.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "90A1B04B1C42720D00D80957"
-            BuildableName = "EasyTransition.app"
-            BlueprintName = "EasyTransition"
-            ReferencedContainer = "container:EasyTransition.xcodeproj">
+            BuildableName = "EasyTransitionExample.app"
+            BlueprintName = "EasyTransitionExample"
+            ReferencedContainer = "container:EasyTransitionExample.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -12,16 +12,18 @@
 		90A1B0551C42720D00D80957 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90A1B0531C42720D00D80957 /* Main.storyboard */; };
 		90A1B0571C42720D00D80957 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90A1B0561C42720D00D80957 /* Assets.xcassets */; };
 		90A1B05A1C42720D00D80957 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90A1B0581C42720D00D80957 /* LaunchScreen.storyboard */; };
+		90A1B0621C42723500D80957 /* EasyTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A1B0611C42723500D80957 /* EasyTransition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		90A1B04C1C42720D00D80957 /* EasyTransition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyTransition.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		90A1B04C1C42720D00D80957 /* EasyTransitionExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyTransitionExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90A1B04F1C42720D00D80957 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90A1B0511C42720D00D80957 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		90A1B0541C42720D00D80957 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		90A1B0561C42720D00D80957 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		90A1B0591C42720D00D80957 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		90A1B05B1C42720D00D80957 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90A1B0611C42723500D80957 /* EasyTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EasyTransition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +48,7 @@
 		90A1B04D1C42720D00D80957 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				90A1B04C1C42720D00D80957 /* EasyTransition.app */,
+				90A1B04C1C42720D00D80957 /* EasyTransitionExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -54,6 +56,7 @@
 		90A1B04E1C42720D00D80957 /* EasyTransition */ = {
 			isa = PBXGroup;
 			children = (
+				90A1B0611C42723500D80957 /* EasyTransition.swift */,
 				90A1B04F1C42720D00D80957 /* AppDelegate.swift */,
 				90A1B0511C42720D00D80957 /* ViewController.swift */,
 				90A1B0531C42720D00D80957 /* Main.storyboard */,
@@ -67,9 +70,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		90A1B04B1C42720D00D80957 /* EasyTransition */ = {
+		90A1B04B1C42720D00D80957 /* EasyTransitionExample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 90A1B05E1C42720D00D80957 /* Build configuration list for PBXNativeTarget "EasyTransition" */;
+			buildConfigurationList = 90A1B05E1C42720D00D80957 /* Build configuration list for PBXNativeTarget "EasyTransitionExample" */;
 			buildPhases = (
 				90A1B0481C42720D00D80957 /* Sources */,
 				90A1B0491C42720D00D80957 /* Frameworks */,
@@ -79,9 +82,9 @@
 			);
 			dependencies = (
 			);
-			name = EasyTransition;
+			name = EasyTransitionExample;
 			productName = EasyTransition;
-			productReference = 90A1B04C1C42720D00D80957 /* EasyTransition.app */;
+			productReference = 90A1B04C1C42720D00D80957 /* EasyTransitionExample.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -99,7 +102,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 90A1B0471C42720D00D80957 /* Build configuration list for PBXProject "EasyTransition" */;
+			buildConfigurationList = 90A1B0471C42720D00D80957 /* Build configuration list for PBXProject "EasyTransitionExample" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -112,7 +115,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				90A1B04B1C42720D00D80957 /* EasyTransition */,
+				90A1B04B1C42720D00D80957 /* EasyTransitionExample */,
 			);
 		};
 /* End PBXProject section */
@@ -137,6 +140,7 @@
 			files = (
 				90A1B0521C42720D00D80957 /* ViewController.swift in Sources */,
 				90A1B0501C42720D00D80957 /* AppDelegate.swift in Sources */,
+				90A1B0621C42723500D80957 /* EasyTransition.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,9 +254,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = EasyTransition/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = indevizible.EasyTransition;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = EasyTransitionExample;
 			};
 			name = Debug;
 		};
@@ -261,16 +266,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = EasyTransition/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = indevizible.EasyTransition;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = EasyTransitionExample;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		90A1B0471C42720D00D80957 /* Build configuration list for PBXProject "EasyTransition" */ = {
+		90A1B0471C42720D00D80957 /* Build configuration list for PBXProject "EasyTransitionExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				90A1B05C1C42720D00D80957 /* Debug */,
@@ -279,7 +285,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		90A1B05E1C42720D00D80957 /* Build configuration list for PBXNativeTarget "EasyTransition" */ = {
+		90A1B05E1C42720D00D80957 /* Build configuration list for PBXNativeTarget "EasyTransitionExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				90A1B05F1C42720D00D80957 /* Debug */,
