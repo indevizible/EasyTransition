@@ -13,6 +13,7 @@ Live preview : https://appetize.io/app/r9whewdb992hymjtznbdn2gbvr
 
 ## Requirements
 Swift 2 or later
+iOS 8.0+
 
 ##  Installation
 You can install this library in 2 ways
