@@ -8,6 +8,6 @@ s.authors				= { "indevizible" => "jadedragon17650@gmail.com" }
 
 s.ios.deployment_target	= "8.0"
 s.source				= { :git => "https://github.com/indevizible/EasyTransition.git", :tag => "#{s.version}"}
-s.source_files			= "EasyTransition/EasyTransition/EasyTransition.swift"
+s.source_files			= "EasyTransition/**/EasyTransition.swift"
 s.requires_arc			= true
 end

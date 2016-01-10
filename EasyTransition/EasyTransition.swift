@@ -25,30 +25,30 @@ import UIKit
 
 public class EasyTransition: UIPercentDrivenInteractiveTransition {
     
-    var transitionDuration: NSTimeInterval = 0.5
+    public var transitionDuration: NSTimeInterval = 0.5
     
      // Percentage for pan dismiss [ 0.0 - 1.0]
     
-    var dismissalPercentCompleteThreshold: CGFloat = 0.2
+    public var dismissalPercentCompleteThreshold: CGFloat = 0.2
     
-    var enableInteractiveDismissalTransition: Bool = true
+    public var enableInteractiveDismissalTransition: Bool = true
     
-    var enableDismissTouchOutBound: Bool = true
+    public var enableDismissTouchOutBound: Bool = true
     
-    var isInteractiveDissmalTransition = false
+    public var isInteractiveDissmalTransition = false
     
     // direction
     // Corner or Edge only
     
-    var direction: UIRectEdge = [.Left]
+    public var direction: UIRectEdge = [.Left]
     
-    var margins = UIEdgeInsetsZero
+    public var margins = UIEdgeInsetsZero
     
-    var sizeMax = CGSize(width: CGFloat.max, height: CGFloat.max)
+    public var sizeMax = CGSize(width: CGFloat.max, height: CGFloat.max)
     
-    var sizeMin = CGSizeZero
+    public var sizeMin = CGSizeZero
 
-    var backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.5)
+    public var backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.5)
     
     private var attachedViewController = UIViewController()
     
