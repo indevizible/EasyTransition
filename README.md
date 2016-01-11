@@ -15,9 +15,10 @@ Live preview : https://appetize.io/app/r9whewdb992hymjtznbdn2gbvr
 ## Features
 - [x] Transition from corners
 - [x] Interactive dismissal transition
+- [ ] In-Out transition direction
 
 ## Requirements
-Swift 2 or later
+Swift 2+
 iOS 8.0+
 
 ##  Installation
