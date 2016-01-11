@@ -23,6 +23,8 @@
 
 import UIKit
 
+import EasyTransitionFramework
+
 public class EasyTransition: UIPercentDrivenInteractiveTransition {
     
     public var transitionDuration: NSTimeInterval = 0.5

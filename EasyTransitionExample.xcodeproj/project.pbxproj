@@ -7,50 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		901640D01C43AAE900921C9F /* ExampleInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 901640CF1C43AAE900921C9F /* ExampleInfo.plist */; };
+		901640D21C43AB7300921C9F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A1B0511C42720D00D80957 /* ViewController.swift */; };
+		901640D31C43AB7B00921C9F /* EasyTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A1B0611C42723500D80957 /* EasyTransition.swift */; };
 		90A1B0501C42720D00D80957 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A1B04F1C42720D00D80957 /* AppDelegate.swift */; };
-		90A1B0521C42720D00D80957 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A1B0511C42720D00D80957 /* ViewController.swift */; };
 		90A1B0551C42720D00D80957 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90A1B0531C42720D00D80957 /* Main.storyboard */; };
 		90A1B0571C42720D00D80957 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90A1B0561C42720D00D80957 /* Assets.xcassets */; };
 		90A1B05A1C42720D00D80957 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90A1B0581C42720D00D80957 /* LaunchScreen.storyboard */; };
-		90A1B0621C42723500D80957 /* EasyTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A1B0611C42723500D80957 /* EasyTransition.swift */; };
 		90A1B0891C42AE0200D80957 /* EasyTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = 90A1B0881C42AE0200D80957 /* EasyTransition.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		90A1B08D1C42AE0200D80957 /* EasyTransition.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90A1B0861C42AE0200D80957 /* EasyTransition.framework */; };
-		90A1B08E1C42AE0200D80957 /* EasyTransition.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 90A1B0861C42AE0200D80957 /* EasyTransition.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		90A1B0931C42AE2100D80957 /* EasyTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A1B0611C42723500D80957 /* EasyTransition.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		90A1B08B1C42AE0200D80957 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 90A1B0441C42720D00D80957 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 90A1B0851C42AE0200D80957;
-			remoteInfo = EasyTransition;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		90A1B0921C42AE0200D80957 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				90A1B08E1C42AE0200D80957 /* EasyTransition.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
+		901640CF1C43AAE900921C9F /* ExampleInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ExampleInfo.plist; sourceTree = "<group>"; };
 		90A1B04C1C42720D00D80957 /* EasyTransitionExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyTransitionExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90A1B04F1C42720D00D80957 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90A1B0511C42720D00D80957 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		90A1B0541C42720D00D80957 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		90A1B0561C42720D00D80957 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		90A1B0591C42720D00D80957 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		90A1B05B1C42720D00D80957 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90A1B0611C42723500D80957 /* EasyTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EasyTransition.swift; sourceTree = "<group>"; };
 		90A1B0861C42AE0200D80957 /* EasyTransition.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EasyTransition.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		90A1B0881C42AE0200D80957 /* EasyTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EasyTransition.h; sourceTree = "<group>"; };
@@ -62,7 +36,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90A1B08D1C42AE0200D80957 /* EasyTransition.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,7 +76,7 @@
 				90A1B0531C42720D00D80957 /* Main.storyboard */,
 				90A1B0561C42720D00D80957 /* Assets.xcassets */,
 				90A1B0581C42720D00D80957 /* LaunchScreen.storyboard */,
-				90A1B05B1C42720D00D80957 /* Info.plist */,
+				901640CF1C43AAE900921C9F /* ExampleInfo.plist */,
 			);
 			path = EasyTransition;
 			sourceTree = "<group>";
@@ -138,12 +111,10 @@
 				90A1B0481C42720D00D80957 /* Sources */,
 				90A1B0491C42720D00D80957 /* Frameworks */,
 				90A1B04A1C42720D00D80957 /* Resources */,
-				90A1B0921C42AE0200D80957 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				90A1B08C1C42AE0200D80957 /* PBXTargetDependency */,
 			);
 			name = EasyTransitionExample;
 			productName = EasyTransition;
@@ -220,6 +191,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				901640D01C43AAE900921C9F /* ExampleInfo.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,9 +202,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90A1B0521C42720D00D80957 /* ViewController.swift in Sources */,
+				901640D21C43AB7300921C9F /* ViewController.swift in Sources */,
 				90A1B0501C42720D00D80957 /* AppDelegate.swift in Sources */,
-				90A1B0621C42723500D80957 /* EasyTransition.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,19 +211,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90A1B0931C42AE2100D80957 /* EasyTransition.swift in Sources */,
+				901640D31C43AB7B00921C9F /* EasyTransition.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		90A1B08C1C42AE0200D80957 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 90A1B0851C42AE0200D80957 /* EasyTransition */;
-			targetProxy = 90A1B08B1C42AE0200D80957 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		90A1B0531C42720D00D80957 /* Main.storyboard */ = {
@@ -361,8 +324,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				INFOPLIST_FILE = EasyTransition/Info.plist;
+				INFOPLIST_FILE = EasyTransition/ExampleInfo.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = indevizible.EasyTransition;
@@ -374,8 +336,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				INFOPLIST_FILE = EasyTransition/Info.plist;
+				INFOPLIST_FILE = EasyTransition/ExampleInfo.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = indevizible.EasyTransition;
@@ -442,6 +403,7 @@
 				90A1B0601C42720D00D80957 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		90A1B08F1C42AE0200D80957 /* Build configuration list for PBXNativeTarget "EasyTransition" */ = {
 			isa = XCConfigurationList;
@@ -450,6 +412,7 @@
 				90A1B0911C42AE0200D80957 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

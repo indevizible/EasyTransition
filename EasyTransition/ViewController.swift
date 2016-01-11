@@ -24,6 +24,8 @@
 
 import UIKit
 
+import EasyTransition
+
 class ViewController: UIViewController {
     
     var transition: EasyTransition?
