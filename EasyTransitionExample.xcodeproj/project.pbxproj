@@ -15,7 +15,6 @@
 		90A1B0571C42720D00D80957 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90A1B0561C42720D00D80957 /* Assets.xcassets */; };
 		90A1B05A1C42720D00D80957 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90A1B0581C42720D00D80957 /* LaunchScreen.storyboard */; };
 		90A1B0891C42AE0200D80957 /* EasyTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = 90A1B0881C42AE0200D80957 /* EasyTransition.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		90B0C0C51C462B9600C000EC /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B0C0C41C462B9600C000EC /* UIViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +29,6 @@
 		90A1B0861C42AE0200D80957 /* EasyTransition.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EasyTransition.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		90A1B0881C42AE0200D80957 /* EasyTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EasyTransition.h; sourceTree = "<group>"; };
 		90A1B08A1C42AE0200D80957 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		90B0C0C41C462B9600C000EC /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +71,6 @@
 			isa = PBXGroup;
 			children = (
 				90A1B0611C42723500D80957 /* EasyTransition.swift */,
-				90B0C0C41C462B9600C000EC /* UIViewExtension.swift */,
 				90A1B04F1C42720D00D80957 /* AppDelegate.swift */,
 				90A1B0511C42720D00D80957 /* ViewController.swift */,
 				90A1B0531C42720D00D80957 /* Main.storyboard */,
@@ -214,7 +211,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90B0C0C51C462B9600C000EC /* UIViewExtension.swift in Sources */,
 				901640D31C43AB7B00921C9F /* EasyTransition.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
