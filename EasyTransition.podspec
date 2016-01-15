@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name					= "EasyTransition"
-s.version				= "1.0.3"
+s.version				= "1.0.4"
 s.summary				= "EasyTransition is a simple library for make a transition in iOS."
 s.homepage				= "https://github.com/indevizible/EasyTransition"
 s.license				= { :type => "MIT", :file => 'LICENSE' }
