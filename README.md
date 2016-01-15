@@ -16,11 +16,15 @@ Live preview : https://appetize.io/app/r9whewdb992hymjtznbdn2gbvr
 - [x] Transition from corners
 - [x] Interactive dismissal transition
 - [ ] In-Out transition direction
-- [ ] Scalable to background view controller
+- [x] Scalable to background view controller
+
+## Limitation
+
+- Scalable background VC not support device rotation
 
 ## Requirements
-Swift 2+
-iOS 8.0+
+- Swift 2+
+- iOS 8.0+
 
 ##  Installation
 You can install this library in 2 ways

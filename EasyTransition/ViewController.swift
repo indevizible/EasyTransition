@@ -79,6 +79,7 @@ class ViewController: UIViewController {
         transition?.direction = .Left
         transition?.margins = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 20)
         transition?.sizeMax = CGSize(width: 250, height: CGFloat.max)
+        transition?.zTransitionSize = 100
         presentViewController(menuVC, animated: true, completion: nil)
     }
     
