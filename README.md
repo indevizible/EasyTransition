@@ -16,6 +16,7 @@ Live preview : https://appetize.io/app/r9whewdb992hymjtznbdn2gbvr
 - [x] Transition from corners
 - [x] Interactive dismissal transition
 - [ ] In-Out transition direction
+- [ ] Scalable to background view controller
 
 ## Requirements
 Swift 2+
