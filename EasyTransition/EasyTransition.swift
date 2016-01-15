@@ -50,6 +50,8 @@ public class EasyTransition: UIPercentDrivenInteractiveTransition {
 
     public var backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.5)
     
+    public var zTransitionSize: CGFloat?
+    
     private var attachedViewController = UIViewController()
     
     private(set) weak var transitionContext: UIViewControllerContextTransitioning?
@@ -134,6 +136,7 @@ extension EasyTransition : UIViewControllerTransitioningDelegate ,UIViewControll
         presentationController.sizeMin = sizeMin
         presentationController.sizeMax = sizeMax
         presentationController.enableDismissTouchOutBound = enableDismissTouchOutBound
+        presentationController.zTransitionSize = zTransitionSize
         return presentationController
     }
     
@@ -172,10 +175,12 @@ extension EasyTransition : UIViewControllerTransitioningDelegate ,UIViewControll
                 return
         }
         
+        
         let fromView = fromVC.view
         let toView = toVC.view
         
-        if isPresentation {
+        if toVC.isBeingPresented() {
+            // Presentation
             containerView.addSubview(toView!)
         }
         
@@ -226,6 +231,7 @@ extension EasyTransition : UIViewControllerTransitioningDelegate ,UIViewControll
             
         }
     }
+    
 }
 
 internal class PresentationController: UIPresentationController, UIAdaptivePresentationControllerDelegate {
@@ -244,7 +250,13 @@ internal class PresentationController: UIPresentationController, UIAdaptivePrese
     
     var direction: UIRectEdge!
     
-    var dimmingView: UIView = UIView()
+    var zTransitionSize: CGFloat?
+    
+    private var dimmingView: UIView = UIView()
+    
+    private var backView: UIView?
+    
+    private var snapshotView: UIView?
     
     var enableDismissTouchOutBound:Bool = true
     
@@ -288,27 +300,62 @@ internal class PresentationController: UIPresentationController, UIAdaptivePrese
     
     internal override func presentationTransitionWillBegin() {
         guard let containerView = containerView else {return}
+        
         dimmingView.frame = containerView.bounds
         dimmingView.alpha = 0.0
-        containerView.insertSubview(dimmingView, atIndex:0)
+        
+        containerView.insertSubview(dimmingView, atIndex:1)
+        
+        var perspectiveTransform: CATransform3D?
+        
+        if let zTransitionSize = zTransitionSize {
+            let backView = UIView()
+            backView.backgroundColor = UIColor.blackColor()
+            backView.frame = containerView.bounds
+            
+            let snapshotView = presentingViewController.view.snapshotViewAfterScreenUpdates(false)
+            backView.addSubview(snapshotView)
+            self.snapshotView = snapshotView
+            
+            containerView.insertSubview(backView, belowSubview:  dimmingView)
+            self.backView = backView
+            
+            perspectiveTransform = CATransform3DIdentity
+            perspectiveTransform?.m34 = 1.0/(-1000)
+            perspectiveTransform = CATransform3DTranslate(perspectiveTransform!, 0, 0, -zTransitionSize)
+        }
+        
+
         if let coordinator = presentedViewController.transitionCoordinator() {
             coordinator.animateAlongsideTransition({
                 (context:UIViewControllerTransitionCoordinatorContext) -> Void in
                 self.dimmingView.alpha = 1.0
-                }, completion:nil)
+                if let perspectiveTransform = perspectiveTransform {
+                    self.snapshotView?.layer.transform = perspectiveTransform
+                }
+                }, completion: { context in
+            })
         } else {
             dimmingView.alpha = 1.0
+            if let perspectiveTransform = perspectiveTransform {
+                snapshotView?.layer.transform = perspectiveTransform
+            }
         }
     }
     
     internal override func dismissalTransitionWillBegin() {
+        
         if let coordinator = presentedViewController.transitionCoordinator() {
             coordinator.animateAlongsideTransition({
                 (context:UIViewControllerTransitionCoordinatorContext) -> Void in
                 self.dimmingView.alpha = 0.0
-                }, completion:nil)
+                self.snapshotView?.layer.transform = CATransform3DIdentity
+                }, completion:{ _ in
+                    self.snapshotView?.layer.transform = CATransform3DIdentity
+            })
         } else {
             dimmingView.alpha = 0.0
+            snapshotView?.layer.transform = CATransform3DIdentity
         }
     }
     
