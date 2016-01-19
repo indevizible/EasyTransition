@@ -52,6 +52,8 @@ public class EasyTransition: UIPercentDrivenInteractiveTransition {
     
     public var zTransitionSize: CGFloat?
     
+    public var blurEffectStyle: UIBlurEffectStyle?
+    
     private var attachedViewController = UIViewController()
     
     private(set) weak var transitionContext: UIViewControllerContextTransitioning?
@@ -137,6 +139,7 @@ extension EasyTransition : UIViewControllerTransitioningDelegate ,UIViewControll
         presentationController.sizeMax = sizeMax
         presentationController.enableDismissTouchOutBound = enableDismissTouchOutBound
         presentationController.zTransitionSize = zTransitionSize
+        presentationController.blurEffectStyle = blurEffectStyle
         return presentationController
     }
     
@@ -236,11 +239,7 @@ extension EasyTransition : UIViewControllerTransitioningDelegate ,UIViewControll
 
 internal class PresentationController: UIPresentationController, UIAdaptivePresentationControllerDelegate {
     
-    var backgroundColor: UIColor! {
-        didSet {
-            dimmingView.backgroundColor = backgroundColor
-        }
-    }
+    var backgroundColor: UIColor!
     
     var margins = UIEdgeInsetsZero
     
@@ -252,7 +251,13 @@ internal class PresentationController: UIPresentationController, UIAdaptivePrese
     
     var zTransitionSize: CGFloat?
     
-    private var dimmingView: UIView = UIView()
+    var blurEffectStyle: UIBlurEffectStyle?
+    
+    private var dimmingView: UIView! {
+        didSet {
+            dimmingView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "dimmingViewTapped:"))
+        }
+    }
     
     private var backView: UIView?
     
@@ -263,10 +268,6 @@ internal class PresentationController: UIPresentationController, UIAdaptivePrese
     override init(presentedViewController: UIViewController, presentingViewController: UIViewController) {
         super.init(presentedViewController:presentedViewController, presentingViewController:presentingViewController)
         
-        dimmingView.alpha = 0.0
-        
-        let tap = UITapGestureRecognizer(target: self, action: "dimmingViewTapped:")
-        dimmingView.addGestureRecognizer(tap)
     }
     
     
@@ -301,8 +302,13 @@ internal class PresentationController: UIPresentationController, UIAdaptivePrese
     internal override func presentationTransitionWillBegin() {
         guard let containerView = containerView else {return}
         
-        dimmingView.frame = containerView.bounds
-        dimmingView.alpha = 0.0
+        if let _ = blurEffectStyle {
+            dimmingView = UIVisualEffectView(frame: containerView.bounds)
+        }else{
+            dimmingView = UIView(frame: containerView.bounds)
+            dimmingView.backgroundColor = backgroundColor
+            dimmingView.alpha = 0.0
+        }
         
         containerView.insertSubview(dimmingView, atIndex:1)
         
@@ -325,16 +331,20 @@ internal class PresentationController: UIPresentationController, UIAdaptivePrese
             perspectiveTransform = CATransform3DTranslate(perspectiveTransform!, 0, 0, -zTransitionSize)
         }
         
-
+        
+        
         if let coordinator = presentedViewController.transitionCoordinator() {
             coordinator.animateAlongsideTransition({
                 (context:UIViewControllerTransitionCoordinatorContext) -> Void in
-                self.dimmingView.alpha = 1.0
+                if let blurView = self.dimmingView as? UIVisualEffectView , blurEffect = self.blurEffectStyle {
+                    blurView.effect = UIBlurEffect(style: blurEffect)
+                }else{
+                    self.dimmingView.alpha = 1.0
+                }
                 if let perspectiveTransform = perspectiveTransform {
                     self.snapshotView?.layer.transform = perspectiveTransform
                 }
-                }, completion: { context in
-            })
+            }, completion:nil)
         } else {
             dimmingView.alpha = 1.0
             if let perspectiveTransform = perspectiveTransform {
@@ -348,11 +358,13 @@ internal class PresentationController: UIPresentationController, UIAdaptivePrese
         if let coordinator = presentedViewController.transitionCoordinator() {
             coordinator.animateAlongsideTransition({
                 (context:UIViewControllerTransitionCoordinatorContext) -> Void in
-                self.dimmingView.alpha = 0.0
+                if let blurView = self.dimmingView as? UIVisualEffectView {
+                    blurView.effect = nil
+                }else{
+                    self.dimmingView.alpha = 0.0
+                }
                 self.snapshotView?.layer.transform = CATransform3DIdentity
-                }, completion:{ _ in
-                    self.snapshotView?.layer.transform = CATransform3DIdentity
-            })
+                }, completion:nil)
         } else {
             dimmingView.alpha = 0.0
             snapshotView?.layer.transform = CATransform3DIdentity

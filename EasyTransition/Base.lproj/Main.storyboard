@@ -172,6 +172,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="5h5-cx-q6n">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FTY-mY-v5z">
                                 <rect key="frame" x="20" y="20" width="38" height="30"/>
                                 <constraints>
@@ -180,7 +183,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="Show">
-                                    <color key="titleColor" red="0.6588235294" green="0.24313725489999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="showTopLeft:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U5P-IW-D8Y"/>
@@ -194,7 +197,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="Show">
-                                    <color key="titleColor" red="0.6588235294" green="0.24313725489999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="showBottom:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lbp-hQ-FiH"/>
@@ -208,7 +211,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="Show">
-                                    <color key="titleColor" red="0.6588235294" green="0.24313725489999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="showBottomRight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jbx-SH-Feg"/>
@@ -222,7 +225,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="Show">
-                                    <color key="titleColor" red="0.6588235294" green="0.24313725489999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="showRight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OT0-iW-IIs"/>
@@ -236,7 +239,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="Show">
-                                    <color key="titleColor" red="0.6588235294" green="0.24313725489999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="showTop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zOh-Po-ZOg"/>
@@ -250,7 +253,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="Show">
-                                    <color key="titleColor" red="0.6588235294" green="0.24313725489999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="showTopRight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3NY-ZZ-QPO"/>
@@ -264,7 +267,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="Show">
-                                    <color key="titleColor" red="0.6588235294" green="0.24313725489999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="showLeft:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VuZ-rT-BD6"/>
@@ -278,7 +281,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="Show">
-                                    <color key="titleColor" red="0.6588235294" green="0.24313725489999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="showBottomLeft:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PET-9A-dWO"/>
@@ -291,7 +294,7 @@
                                     <constraint firstAttribute="height" constant="66" id="oeF-pz-FcA"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="30"/>
-                                <color key="textColor" red="0.6588235294" green="0.24313725489999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -302,6 +305,8 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="wTf-NV-QEp" secondAttribute="bottom" constant="8" id="4eD-fR-cS8"/>
                             <constraint firstItem="12u-Qn-bfw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8V3-Qe-G8R"/>
                             <constraint firstAttribute="trailing" secondItem="vi1-gS-kjQ" secondAttribute="trailing" constant="20" id="Dre-gf-CTb"/>
+                            <constraint firstAttribute="trailing" secondItem="5h5-cx-q6n" secondAttribute="trailing" id="FRg-TC-1ri"/>
+                            <constraint firstItem="5h5-cx-q6n" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Fja-7f-c6N"/>
                             <constraint firstItem="wKA-xh-p0r" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="I8Z-gf-wmE"/>
                             <constraint firstItem="SdC-AW-b6J" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IW1-MH-3VO"/>
                             <constraint firstItem="12u-Qn-bfw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Tco-Yo-2jp"/>
@@ -309,12 +314,14 @@
                             <constraint firstItem="dLK-U3-hnk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YSJ-3d-Nfq"/>
                             <constraint firstItem="dLK-U3-hnk" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ag9-bJ-p7n"/>
                             <constraint firstItem="FTY-mY-v5z" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="bDV-pF-XKm"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5h5-cx-q6n" secondAttribute="bottom" id="fRW-0P-mar"/>
                             <constraint firstAttribute="trailing" secondItem="Wat-4k-Q6K" secondAttribute="trailing" constant="20" id="fTU-8n-vfZ"/>
                             <constraint firstItem="cAU-pq-aps" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="kRD-hs-UDg"/>
                             <constraint firstAttribute="trailing" secondItem="wKA-xh-p0r" secondAttribute="trailing" constant="20" id="kl1-zX-lx9"/>
                             <constraint firstItem="wTf-NV-QEp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="lsw-n2-10G"/>
                             <constraint firstItem="FTY-mY-v5z" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="rBK-DS-4oH"/>
                             <constraint firstItem="cAU-pq-aps" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="sCH-Oe-Wop"/>
+                            <constraint firstItem="5h5-cx-q6n" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="xQw-L1-18v"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -378,4 +385,7 @@
             <point key="canvasLocation" x="535" y="-74"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bg" width="2144" height="1424"/>
+    </resources>
 </document>
