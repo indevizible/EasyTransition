@@ -15,8 +15,9 @@ Live preview : https://appetize.io/app/r9whewdb992hymjtznbdn2gbvr
 ## Features
 - [x] Transition from corners
 - [x] Interactive dismissal transition
-- [ ] In-Out transition direction
 - [x] Scalable to background view controller
+- [x] Blur Effect
+- [ ] In-Out transition direction
 
 ## Limitation
 
@@ -48,7 +49,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
 use_frameworks!
 
-pod 'EasyTransition', '~> 1.0'
+pod 'EasyTransition', '~> 1.1'
 ```
 
 Then, run the following command:
@@ -102,7 +103,8 @@ transition?.direction = [.Top,.Right]
 And more on EasyTransitionExample.xcodeproj
 
 ## Sources Used
-Background Images: www.subtlepatterns.com
+- www.subtlepatterns.com
+- www.unsplash.com
 
 [Alamofire](https://github.com/Alamofire/Alamofire) for Cocoapods and Carthage description
 
