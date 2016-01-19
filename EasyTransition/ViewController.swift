@@ -49,6 +49,7 @@ class ViewController: UIViewController {
         transition = EasyTransition(attachedViewController: menuVC)
         transition?.transitionDuration = 0.3
         transition?.direction = .Top
+        transition?.blurEffectStyle = .Dark
         transition?.margins = UIEdgeInsets(top: 100, left: 20, bottom: 100, right: 20)
         presentViewController(menuVC, animated: true, completion: nil)
     }
@@ -58,6 +59,7 @@ class ViewController: UIViewController {
         transition = EasyTransition(attachedViewController: menuVC)
         transition?.transitionDuration = 0.4
         transition?.direction = .Right
+        transition?.blurEffectStyle = .Light
         transition?.margins = UIEdgeInsets(top: 0, left: 100, bottom: 0, right: 0)
         presentViewController(menuVC, animated: true, completion: nil)
     }
@@ -75,11 +77,12 @@ class ViewController: UIViewController {
     @IBAction func showLeft(sender: AnyObject) {
         let menuVC = storyboard!.instantiateViewControllerWithIdentifier("menu")
         transition = EasyTransition(attachedViewController: menuVC)
-        transition?.transitionDuration = 0.3
+        transition?.transitionDuration = 0.4
         transition?.direction = .Left
         transition?.margins = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 20)
         transition?.sizeMax = CGSize(width: 250, height: CGFloat.max)
         transition?.zTransitionSize = 100
+        transition?.backgroundColor = UIColor.clearColor()
         presentViewController(menuVC, animated: true, completion: nil)
     }
     

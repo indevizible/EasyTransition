@@ -9,13 +9,39 @@
 /* Begin PBXBuildFile section */
 		901640D01C43AAE900921C9F /* ExampleInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 901640CF1C43AAE900921C9F /* ExampleInfo.plist */; };
 		901640D21C43AB7300921C9F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A1B0511C42720D00D80957 /* ViewController.swift */; };
-		901640D31C43AB7B00921C9F /* EasyTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A1B0611C42723500D80957 /* EasyTransition.swift */; };
+		909E7A0A1C4E79B300DAD6B7 /* EasyTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A1B0611C42723500D80957 /* EasyTransition.swift */; };
+		909E7A0B1C4E7ABB00DAD6B7 /* EasyTransition.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90A1B0861C42AE0200D80957 /* EasyTransition.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		909E7A0C1C4E7ABB00DAD6B7 /* EasyTransition.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 90A1B0861C42AE0200D80957 /* EasyTransition.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		90A1B0501C42720D00D80957 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A1B04F1C42720D00D80957 /* AppDelegate.swift */; };
 		90A1B0551C42720D00D80957 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90A1B0531C42720D00D80957 /* Main.storyboard */; };
 		90A1B0571C42720D00D80957 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90A1B0561C42720D00D80957 /* Assets.xcassets */; };
 		90A1B05A1C42720D00D80957 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90A1B0581C42720D00D80957 /* LaunchScreen.storyboard */; };
 		90A1B0891C42AE0200D80957 /* EasyTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = 90A1B0881C42AE0200D80957 /* EasyTransition.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		909E7A0D1C4E7ABB00DAD6B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 90A1B0441C42720D00D80957 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 90A1B0851C42AE0200D80957;
+			remoteInfo = EasyTransition;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		909E7A0F1C4E7ABB00DAD6B7 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				909E7A0C1C4E7ABB00DAD6B7 /* EasyTransition.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		901640CF1C43AAE900921C9F /* ExampleInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ExampleInfo.plist; sourceTree = "<group>"; };
@@ -36,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				909E7A0B1C4E7ABB00DAD6B7 /* EasyTransition.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,7 +79,7 @@
 		90A1B0431C42720D00D80957 = {
 			isa = PBXGroup;
 			children = (
-				90A1B04E1C42720D00D80957 /* EasyTransition */,
+				90A1B04E1C42720D00D80957 /* EasyTransitionExample */,
 				90A1B0871C42AE0200D80957 /* EasyTransition */,
 				90A1B04D1C42720D00D80957 /* Products */,
 			);
@@ -67,10 +94,9 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		90A1B04E1C42720D00D80957 /* EasyTransition */ = {
+		90A1B04E1C42720D00D80957 /* EasyTransitionExample */ = {
 			isa = PBXGroup;
 			children = (
-				90A1B0611C42723500D80957 /* EasyTransition.swift */,
 				90A1B04F1C42720D00D80957 /* AppDelegate.swift */,
 				90A1B0511C42720D00D80957 /* ViewController.swift */,
 				90A1B0531C42720D00D80957 /* Main.storyboard */,
@@ -78,12 +104,14 @@
 				90A1B0581C42720D00D80957 /* LaunchScreen.storyboard */,
 				901640CF1C43AAE900921C9F /* ExampleInfo.plist */,
 			);
+			name = EasyTransitionExample;
 			path = EasyTransition;
 			sourceTree = "<group>";
 		};
 		90A1B0871C42AE0200D80957 /* EasyTransition */ = {
 			isa = PBXGroup;
 			children = (
+				90A1B0611C42723500D80957 /* EasyTransition.swift */,
 				90A1B0881C42AE0200D80957 /* EasyTransition.h */,
 				90A1B08A1C42AE0200D80957 /* Info.plist */,
 			);
@@ -111,10 +139,12 @@
 				90A1B0481C42720D00D80957 /* Sources */,
 				90A1B0491C42720D00D80957 /* Frameworks */,
 				90A1B04A1C42720D00D80957 /* Resources */,
+				909E7A0F1C4E7ABB00DAD6B7 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				909E7A0E1C4E7ABB00DAD6B7 /* PBXTargetDependency */,
 			);
 			name = EasyTransitionExample;
 			productName = EasyTransition;
@@ -211,11 +241,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				901640D31C43AB7B00921C9F /* EasyTransition.swift in Sources */,
+				909E7A0A1C4E79B300DAD6B7 /* EasyTransition.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		909E7A0E1C4E7ABB00DAD6B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 90A1B0851C42AE0200D80957 /* EasyTransition */;
+			targetProxy = 909E7A0D1C4E7ABB00DAD6B7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		90A1B0531C42720D00D80957 /* Main.storyboard */ = {
@@ -324,10 +362,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = EasyTransition/ExampleInfo.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = indevizible.EasyTransition;
+				PRODUCT_BUNDLE_IDENTIFIER = indevizible.EasyTransitionExample;
 				PRODUCT_NAME = EasyTransitionExample;
 			};
 			name = Debug;
@@ -336,10 +375,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = EasyTransition/ExampleInfo.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = indevizible.EasyTransition;
+				PRODUCT_BUNDLE_IDENTIFIER = indevizible.EasyTransitionExample;
 				PRODUCT_NAME = EasyTransitionExample;
 			};
 			name = Release;
