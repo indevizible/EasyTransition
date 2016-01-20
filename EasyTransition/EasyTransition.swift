@@ -293,10 +293,10 @@ internal class PresentationController: UIPresentationController, UIAdaptivePrese
     }
     
     internal override func sizeForChildContentContainer(container: UIContentContainer, withParentContainerSize parentSize: CGSize) -> CGSize {
-        var size = CGSizeMake(parentSize.width - (margins.left + margins.right), parentSize.height - (margins.top + margins.bottom))
-        size = CGSizeMake(size.width < sizeMax.width ? size.width : sizeMax.width, size.height < sizeMax.height ? size.height : sizeMax.height)
-        size = CGSizeMake(size.width > sizeMin.width ? size.width : sizeMax.width, size.height > sizeMin.height ? size.height : sizeMin.height)
-        return size
+        return CGSize(
+            width:  max(min(parentSize.width - (margins.left + margins.right)   ,sizeMax.width),sizeMin.width),
+            height: max(min(parentSize.height - (margins.top + margins.bottom)  ,sizeMax.height),sizeMin.height)
+        )
     }
     
     internal override func presentationTransitionWillBegin() {
