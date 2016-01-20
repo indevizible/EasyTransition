@@ -364,7 +364,13 @@ internal class PresentationController: UIPresentationController, UIAdaptivePrese
                     self.dimmingView.alpha = 0.0
                 }
                 self.snapshotView?.layer.transform = CATransform3DIdentity
-                }, completion:nil)
+                }, completion: { context in
+                    if context.isCancelled() ,
+                        let blurEffect = self.blurEffectStyle,
+                        let blurView = self.dimmingView as? UIVisualEffectView {
+                        blurView.effect = UIBlurEffect(style: blurEffect)
+                    }
+            })
         } else {
             dimmingView.alpha = 0.0
             snapshotView?.layer.transform = CATransform3DIdentity
