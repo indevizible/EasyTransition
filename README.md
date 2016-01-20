@@ -10,7 +10,7 @@ EasyTransition is a simple library for make a transition in iOS.
 
 ![example](https://raw.githubusercontent.com/indevizible/EasyTransition/master/EasyTransition.gif)
 
-Live preview : https://appetize.io/app/r9whewdb992hymjtznbdn2gbvr
+[Live preview](https://appetize.io/app/jc8dgwd8rfhzxtna06e1b4bz9w)
 
 ## Features
 - [x] Transition from corners
