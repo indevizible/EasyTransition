@@ -21,18 +21,18 @@ Live preview : https://appetize.io/app/r9whewdb992hymjtznbdn2gbvr
 
 ## Limitation
 
-- Scalable background VC not support device rotation
+- This library can be compile with iOS 8.0+ but transition work on iOS 8.3+
 
 ## Requirements
 - Swift 2+
-- iOS 8.0+
+- iOS 8.3+
 
 ##  Installation
 You can install this library in 2 ways
 
 ### Manually
 
-Copy this [file](EasyTransition/EasyTransition.swift) to your project and give me some beer.
+Copy [EasyTransition.swift](EasyTransition/EasyTransition.swift) and [UIView+Constraints.swift](EasyTransition/UIView+Constraints.swift) to your project and give me some beer.
 
 ### CocoaPods
 
@@ -105,27 +105,13 @@ And more on EasyTransitionExample.xcodeproj
 ## Sources Used
 - www.subtlepatterns.com
 - www.unsplash.com
+- [Alamofire/Alamofire](https://github.com/Alamofire/Alamofire) for Cocoapods and Carthage description
 
-[Alamofire](https://github.com/Alamofire/Alamofire) for Cocoapods and Carthage description
+## Author
 
-## The MIT License (MIT)
+Nattawut Singhchai, jadedragon17650@gmail.com
 
-Copyright (c) 2016 Nattawut Singhchai
+## License
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+EZSwiftExtensions is available under the MIT license. See the [LICENSE file](LICENSE).
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
