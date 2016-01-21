@@ -32,13 +32,6 @@ public class EasyTransition: UIPercentDrivenInteractiveTransition {
     public var dismissalPercentCompleteThreshold: CGFloat = 0.2
     
     public var enableInteractiveDismissalTransition: Bool = true
-//        {
-//        didSet {
-//            if  enableInteractiveDismissalTransition == true ,let _ = zTransitionSize {
-//                enableInteractiveDismissalTransition = false
-//            }
-//        }
-//    }
     
     public var enableDismissTouchOutBound: Bool = true
     
@@ -58,13 +51,6 @@ public class EasyTransition: UIPercentDrivenInteractiveTransition {
     public var backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.5)
     
     public var zTransitionSize: CGFloat?
-//        {
-//        didSet {
-//            if let _ = zTransitionSize {
-//                enableInteractiveDismissalTransition = false
-//            }
-//        }
-//    }
     
     public var blurEffectStyle: UIBlurEffectStyle?
     
