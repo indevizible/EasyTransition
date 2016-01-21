@@ -10,6 +10,7 @@
 		901640D01C43AAE900921C9F /* ExampleInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 901640CF1C43AAE900921C9F /* ExampleInfo.plist */; };
 		901640D21C43AB7300921C9F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A1B0511C42720D00D80957 /* ViewController.swift */; };
 		903C93E61C4F73B400EE99C5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 903C93E51C4F73B400EE99C5 /* InfoPlist.strings */; };
+		906AE08F1C50C5DA00BE6BE0 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906AE08E1C50C5DA00BE6BE0 /* UIView+Constraints.swift */; };
 		909E7A0A1C4E79B300DAD6B7 /* EasyTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A1B0611C42723500D80957 /* EasyTransition.swift */; };
 		909E7A0B1C4E7ABB00DAD6B7 /* EasyTransition.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90A1B0861C42AE0200D80957 /* EasyTransition.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		909E7A0C1C4E7ABB00DAD6B7 /* EasyTransition.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 90A1B0861C42AE0200D80957 /* EasyTransition.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -47,6 +48,7 @@
 /* Begin PBXFileReference section */
 		901640CF1C43AAE900921C9F /* ExampleInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ExampleInfo.plist; sourceTree = "<group>"; };
 		903C93E51C4F73B400EE99C5 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
+		906AE08E1C50C5DA00BE6BE0 /* UIView+Constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 		90A1B04C1C42720D00D80957 /* EasyTransitionExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyTransitionExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90A1B04F1C42720D00D80957 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90A1B0511C42720D00D80957 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 		90A1B0871C42AE0200D80957 /* EasyTransition */ = {
 			isa = PBXGroup;
 			children = (
+				906AE08E1C50C5DA00BE6BE0 /* UIView+Constraints.swift */,
 				90A1B0611C42723500D80957 /* EasyTransition.swift */,
 				90A1B0881C42AE0200D80957 /* EasyTransition.h */,
 				90A1B08A1C42AE0200D80957 /* Info.plist */,
@@ -246,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				909E7A0A1C4E79B300DAD6B7 /* EasyTransition.swift in Sources */,
+				906AE08F1C50C5DA00BE6BE0 /* UIView+Constraints.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
