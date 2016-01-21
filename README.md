@@ -1,5 +1,5 @@
 # EasyTransition
-[![Build Status](https://travis-ci.org/indevizible/EasyTransition.svg)](https://travis-ci.org/indevizible/EasyTransition)
+[![Build Status](https://travis-ci.org/indevizible/EasyTransition.svg?branch=master)](https://travis-ci.org/indevizible/EasyTransition.svg?branch=master)
 [![Cocoapods Compatible](https://img.shields.io/cocoapods/v/EasyTransition.svg)](https://img.shields.io/cocoapods/v/EasyTransition.svg)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![GitHub license](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/indevizible/EasyTransition/master/LICENSE)
