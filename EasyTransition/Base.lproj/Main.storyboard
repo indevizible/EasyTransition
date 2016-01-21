@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--IMAGES-->
@@ -353,22 +354,22 @@
                             <constraint firstItem="Wat-4k-Q6K" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1uy-lG-SOZ"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="wTf-NV-QEp" secondAttribute="bottom" constant="8" id="4eD-fR-cS8"/>
                             <constraint firstItem="12u-Qn-bfw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8V3-Qe-G8R"/>
+                            <constraint firstItem="FTY-mY-v5z" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="20" id="97F-z8-hrc"/>
                             <constraint firstAttribute="trailing" secondItem="vi1-gS-kjQ" secondAttribute="trailing" constant="20" id="Dre-gf-CTb"/>
                             <constraint firstAttribute="trailing" secondItem="5h5-cx-q6n" secondAttribute="trailing" constant="-20" id="FRg-TC-1ri"/>
                             <constraint firstItem="5h5-cx-q6n" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-20" id="Fja-7f-c6N"/>
-                            <constraint firstItem="wKA-xh-p0r" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="I8Z-gf-wmE"/>
                             <constraint firstItem="SdC-AW-b6J" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IW1-MH-3VO"/>
-                            <constraint firstItem="12u-Qn-bfw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Tco-Yo-2jp"/>
+                            <constraint firstItem="wKA-xh-p0r" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="20" id="VYK-NZ-ull"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="SdC-AW-b6J" secondAttribute="bottom" constant="8" id="X9C-6h-oMz"/>
                             <constraint firstItem="dLK-U3-hnk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YSJ-3d-Nfq"/>
                             <constraint firstItem="dLK-U3-hnk" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ag9-bJ-p7n"/>
+                            <constraint firstItem="12u-Qn-bfw" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="20" id="anx-4d-oe4"/>
                             <constraint firstItem="FTY-mY-v5z" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="bDV-pF-XKm"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5h5-cx-q6n" secondAttribute="bottom" constant="-20" id="fRW-0P-mar"/>
                             <constraint firstAttribute="trailing" secondItem="Wat-4k-Q6K" secondAttribute="trailing" constant="20" id="fTU-8n-vfZ"/>
                             <constraint firstItem="cAU-pq-aps" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="kRD-hs-UDg"/>
                             <constraint firstAttribute="trailing" secondItem="wKA-xh-p0r" secondAttribute="trailing" constant="20" id="kl1-zX-lx9"/>
                             <constraint firstItem="wTf-NV-QEp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="lsw-n2-10G"/>
-                            <constraint firstItem="FTY-mY-v5z" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="rBK-DS-4oH"/>
                             <constraint firstItem="cAU-pq-aps" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="sCH-Oe-Wop"/>
                             <constraint firstItem="5h5-cx-q6n" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="-20" id="xQw-L1-18v"/>
                         </constraints>

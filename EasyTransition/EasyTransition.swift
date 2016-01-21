@@ -32,6 +32,13 @@ public class EasyTransition: UIPercentDrivenInteractiveTransition {
     public var dismissalPercentCompleteThreshold: CGFloat = 0.2
     
     public var enableInteractiveDismissalTransition: Bool = true
+//        {
+//        didSet {
+//            if  enableInteractiveDismissalTransition == true ,let _ = zTransitionSize {
+//                enableInteractiveDismissalTransition = false
+//            }
+//        }
+//    }
     
     public var enableDismissTouchOutBound: Bool = true
     
@@ -51,6 +58,13 @@ public class EasyTransition: UIPercentDrivenInteractiveTransition {
     public var backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.5)
     
     public var zTransitionSize: CGFloat?
+//        {
+//        didSet {
+//            if let _ = zTransitionSize {
+//                enableInteractiveDismissalTransition = false
+//            }
+//        }
+//    }
     
     public var blurEffectStyle: UIBlurEffectStyle?
     
@@ -354,6 +368,21 @@ internal class PresentationController: UIPresentationController, UIAdaptivePrese
     internal override func dismissalTransitionWillBegin() {
         
         if let coordinator = presentedViewController.transitionCoordinator() {
+            if let snapshotView = snapshotView {
+                coordinator.animateAlongsideTransitionInView(snapshotView, animation: {transitionContext in
+                    self.snapshotView?.layer.transform = CATransform3DIdentity
+                    }, completion: { transitionContext in
+                        if transitionContext.isCancelled() {
+                            if let perspectiveTransform = self.perspectiveTransform {
+                                self.snapshotView?.layer.transform = perspectiveTransform
+                            }
+                        }else{
+                            self.presentingViewController.view.removeInstalledConstraints()
+                            self.presentingViewController.view.translatesAutoresizingMaskIntoConstraints = true
+                        }
+                })
+            }
+            
             coordinator.animateAlongsideTransition({
                 (context:UIViewControllerTransitionCoordinatorContext) -> Void in
                 if let blurView = self.dimmingView as? UIVisualEffectView {
@@ -361,20 +390,10 @@ internal class PresentationController: UIPresentationController, UIAdaptivePrese
                 }else{
                     self.dimmingView.alpha = 0.0
                 }
-                self.snapshotView?.layer.transform = CATransform3DIdentity
-                }, completion: { context in
-                    
-                    if context.isCancelled() {
-                        if let perspectiveTransform = self.perspectiveTransform {
-                            self.snapshotView?.layer.transform = perspectiveTransform
-                        }
-                        if let blurEffect = self.blurEffectStyle,
-                            let blurView = self.dimmingView as? UIVisualEffectView {
-                                blurView.effect = UIBlurEffect(style: blurEffect)
-                        }
-                    }else{
-                        self.presentingViewController.view.removeInstalledConstraints()
-                        self.presentingViewController.view.translatesAutoresizingMaskIntoConstraints = true
+            }, completion: { context in
+                    if context.isCancelled(), let blurEffect = self.blurEffectStyle,
+                        let blurView = self.dimmingView as? UIVisualEffectView {
+                            blurView.effect = UIBlurEffect(style: blurEffect)
                     }
             })
         } else {

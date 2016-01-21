@@ -114,8 +114,8 @@ class ViewController: UIViewController {
         transition?.direction = .Left
         transition?.margins = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 20)
         transition?.sizeMax = CGSize(width: 250, height: CGFloat.max)
-        transition?.zTransitionSize = 100
-        transition?.backgroundColor = UIColor.clearColor()
+        transition?.zTransitionSize = 60
+        transition?.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.4)
         if let firstVC = menuVC.viewControllers.first as? ExampleMenuViewController {
             firstVC.imageDidSelected = setImageWithAnimate
         }
