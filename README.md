@@ -106,6 +106,7 @@ And more on EasyTransitionExample.xcodeproj
 - www.subtlepatterns.com
 - www.unsplash.com
 - [Alamofire/Alamofire](https://github.com/Alamofire/Alamofire) for Cocoapods and Carthage description
+- [prolificinteractive/NavigationControllerBlurTransition](https://github.com/prolificinteractive/NavigationControllerBlurTransition) for [UIView+Constraints.swift](https://github.com/prolificinteractive/NavigationControllerBlurTransition/blob/master/Pod/Classes/UIView%2BConstraints.swift)
 
 ## Author
 
@@ -113,5 +114,5 @@ Nattawut Singhchai, jadedragon17650@gmail.com
 
 ## License
 
-EZSwiftExtensions is available under the MIT license. See the [LICENSE file](LICENSE).
+EasyTransition is available under the MIT license. See the [LICENSE file](LICENSE).
 
