@@ -1,6 +1,6 @@
 # EasyTransition
 [![Build Status](https://travis-ci.org/indevizible/EasyTransition.svg?branch=master)](https://travis-ci.org/indevizible/EasyTransition.svg?branch=master)
-[![Cocoapods Compatible](https://img.shields.io/cocoapods/v/EasyTransition.svg)](https://img.shields.io/cocoapods/v/EasyTransition.svg)
+[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/EasyTransition.svg)](https://img.shields.io/cocoapods/v/EasyTransition.svg)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![GitHub license](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/indevizible/EasyTransition/master/LICENSE)
 [![Platform](https://img.shields.io/cocoapods/p/EasyTransition.svg?style=flat)](http://cocoadocs.org/docsets/EasyTransition)
@@ -105,7 +105,7 @@ And more on EasyTransitionExample.xcodeproj
 ## Sources Used
 - www.subtlepatterns.com
 - www.unsplash.com
-- [Alamofire/Alamofire](https://github.com/Alamofire/Alamofire) for Cocoapods and Carthage description
+- [Alamofire/Alamofire](https://github.com/Alamofire/Alamofire) for CocoaPods and Carthage description
 - [prolificinteractive/NavigationControllerBlurTransition](https://github.com/prolificinteractive/NavigationControllerBlurTransition) for [UIView+Constraints.swift](https://github.com/prolificinteractive/NavigationControllerBlurTransition/blob/master/Pod/Classes/UIView%2BConstraints.swift)
 
 ## Author
