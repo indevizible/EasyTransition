@@ -25,16 +25,21 @@ import UIKit
 
 public class EasyTransition: UIPercentDrivenInteractiveTransition {
     
-    public var transitionDuration: NSTimeInterval = 0.5
+    @IBInspectable
+    public var transitionDuration: Double = 0.5
     
      // Percentage for pan dismiss [ 0.0 - 1.0]
     
+    @IBInspectable
     public var dismissalPercentCompleteThreshold: CGFloat = 0.2
     
+    @IBInspectable
     public var enableInteractiveDismissalTransition: Bool = true
     
+    @IBInspectable
     public var enableDismissTouchOutBound: Bool = true
     
+    @IBInspectable
     public var isInteractiveDissmalTransition = false
     
     // direction
@@ -48,31 +53,41 @@ public class EasyTransition: UIPercentDrivenInteractiveTransition {
     
     public var sizeMin = CGSizeZero
 
+    @IBInspectable
     public var backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.5)
     
-    public var zTransitionSize: CGFloat?
+    @IBInspectable
+    public var zTransitionSize: CGFloat = 0.0
     
+    @IBInspectable
     public var blurEffectStyle: UIBlurEffectStyle?
     
-    private var attachedViewController = UIViewController()
+    public var attachedViewController: UIViewController? {
+        didSet {
+            attachedViewController?.transitioningDelegate = self
+            attachedViewController?.modalPresentationStyle = .Custom
+            
+            let presentationPanGesture = UIPanGestureRecognizer()
+            presentationPanGesture.addTarget(self, action: "dismissalPanGesture:")
+            attachedViewController?.view.addGestureRecognizer(presentationPanGesture)
+        }
+    }
     
     private(set) weak var transitionContext: UIViewControllerContextTransitioning?
     
     private var isPresentation : Bool = false
     
+    private func setAttachedViewController(viewController: UIViewController?) {
+        attachedViewController = viewController
+    }
+    
+    public override init() {
+        
+    }
+    
     public init(attachedViewController: UIViewController) {
         super.init()
-        
-        self.attachedViewController = attachedViewController
-        
-        attachedViewController.transitioningDelegate = self
-        attachedViewController.modalPresentationStyle = .Custom
-        
-
-        let presentationPanGesture = UIPanGestureRecognizer()
-        presentationPanGesture.addTarget(self, action: "dismissalPanGesture:")
-        attachedViewController.view.addGestureRecognizer(presentationPanGesture)
-
+        self.setAttachedViewController(attachedViewController)
     }
     
     func dismissalPanGesture(recognizer: UIPanGestureRecognizer) {
@@ -99,10 +114,14 @@ public class EasyTransition: UIPercentDrivenInteractiveTransition {
     }
     
     private func panGestureBegan(recognizer: UIPanGestureRecognizer) {
-        attachedViewController.dismissViewControllerAnimated(true, completion: nil)
+        attachedViewController?.dismissViewControllerAnimated(true, completion: nil)
     }
     
     private func panGestureChanged(recognizer: UIPanGestureRecognizer) {
+        
+        guard let attachedViewController = attachedViewController else {
+            return
+        }
         
         let transition = recognizer.translationInView(attachedViewController.view)
         
@@ -249,7 +268,7 @@ internal class PresentationController: UIPresentationController, UIAdaptivePrese
     
     var direction: UIRectEdge!
     
-    var zTransitionSize: CGFloat?
+    var zTransitionSize: CGFloat = 0.0
     
     var blurEffectStyle: UIBlurEffectStyle?
     
@@ -310,7 +329,7 @@ internal class PresentationController: UIPresentationController, UIAdaptivePrese
         
         containerView.insertSubview(dimmingView, atIndex:1)
         
-        if let zTransitionSize = zTransitionSize {
+        if  zTransitionSize != 0.0 {
             let backView = UIView()
             backView.frame = containerView.bounds
             
