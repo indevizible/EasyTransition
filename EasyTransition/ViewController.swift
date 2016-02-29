@@ -30,6 +30,8 @@ class ViewController: UIViewController {
     
     var transition: EasyTransition?
 
+    @IBOutlet var bottomTransition: EasyTransition!
+    
     @IBOutlet var actionButtons: [UIButton]!
     
     @IBOutlet weak var backgroundImage: UIImageView!
@@ -96,11 +98,10 @@ class ViewController: UIViewController {
     
     @IBAction func showBottom(sender: AnyObject) {
         let menuVC = storyboard!.instantiateViewControllerWithIdentifier("menu") as! UINavigationController
-        transition = EasyTransition(attachedViewController: menuVC)
-        transition?.transitionDuration = 0.5
-        transition?.direction = .Bottom
-        transition?.margins = UIEdgeInsets(top: 20, left: 20, bottom: 0, right: 20)
-        transition?.sizeMax = CGSize(width: CGFloat.max, height: 200)
+        bottomTransition?.attachedViewController = menuVC
+        bottomTransition?.direction = .Bottom
+        bottomTransition?.margins = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0)
+        bottomTransition?.sizeMax = CGSize(width: CGFloat.max, height: 320)
         if let firstVC = menuVC.viewControllers.first as? ExampleMenuViewController {
             firstVC.imageDidSelected = setImageWithAnimate
         }
@@ -114,7 +115,6 @@ class ViewController: UIViewController {
         transition?.direction = .Left
         transition?.margins = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 20)
         transition?.sizeMax = CGSize(width: 250, height: CGFloat.max)
-        transition?.zTransitionSize = 60
         transition?.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.4)
         if let firstVC = menuVC.viewControllers.first as? ExampleMenuViewController {
             firstVC.imageDidSelected = setImageWithAnimate
