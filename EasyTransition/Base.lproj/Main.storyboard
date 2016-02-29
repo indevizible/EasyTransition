@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -377,7 +377,6 @@
                     <navigationItem key="navigationItem" title="Example" id="AHx-Ce-5gj"/>
                     <connections>
                         <outlet property="backgroundImage" destination="5h5-cx-q6n" id="Vm7-yN-2cJ"/>
-                        <outlet property="bottomTransition" destination="ltB-Lo-Mmp" id="jgc-9h-VX0"/>
                         <outlet property="projectNameLabel" destination="dLK-U3-hnk" id="UeH-Al-6eH"/>
                         <outletCollection property="actionButtons" destination="FTY-mY-v5z" collectionClass="NSMutableArray" id="kla-pD-Eiw"/>
                         <outletCollection property="actionButtons" destination="12u-Qn-bfw" collectionClass="NSMutableArray" id="JVO-GV-8Kg"/>
@@ -390,16 +389,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <customObject id="ltB-Lo-Mmp" customClass="EasyTransition" customModule="EasyTransition">
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="transitionDuration">
-                            <real key="value" value="0.5"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="number" keyPath="zTransitionSize">
-                            <real key="value" value="60"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                </customObject>
             </objects>
             <point key="canvasLocation" x="1316" y="642"/>
         </scene>
