@@ -93,13 +93,13 @@ Customise transition and present normally:
 let vc = TargetViewController()
 transition = EasyTransition(attachedViewController: vc)
 transition?.transitionDuration = 0.4
-transition?.direction = .Right
+transition?.direction = .right
 transition?.margins = UIEdgeInsets(top: 0, left: 100, bottom: 0, right: 0)
-presentViewController(vc, animated: true, completion: nil)
+present(vc, animated: true, completion: nil)
 ```
 You can also make a direction from a corner:
 ```swift
-transition?.direction = [.Top,.Right]
+transition?.direction = [.top,.right]
 ```
 And more on EasyTransitionExample.xcodeproj
 
