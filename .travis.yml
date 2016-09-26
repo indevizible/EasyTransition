@@ -6,7 +6,7 @@ env:
   - LANG=en_US.UTF-8
   - PROJECT=EasyTransitionExample.xcodeproj
   - IOS_FRAMEWORK_SCHEME="EasyTransition"
-  - IOS_SDK=iphonesimulator9.2
+  - IOS_SDK=iphonesimulator10.0
   - EXAMPLE_SCHEME="EasyTransitionExample"
   matrix:
     - DESTINATION="OS=8.3,name=iPhone 4S"          SCHEME="$IOS_FRAMEWORK_SCHEME"     SDK="$IOS_SDK"     RUN_TESTS="NO" BUILD_EXAMPLE="YES" POD_LINT="NO"
