@@ -33,38 +33,38 @@ internal extension UIView
         }
     }
 
-    func makeEdgesEqualTo(view: UIView)
+    func makeEdgesEqualTo(_ view: UIView)
     {
         self.translatesAutoresizingMaskIntoConstraints = false
         let topConstraint = NSLayoutConstraint(item: self,
-            attribute: .Top,
-            relatedBy: .Equal,
+            attribute: .top,
+            relatedBy: .equal,
             toItem: view,
-            attribute: .Top,
+            attribute: .top,
             multiplier: 1.0,
             constant: 0.0)
 
         let bottomConstraint = NSLayoutConstraint(item: self,
-            attribute: .Bottom,
-            relatedBy: .Equal,
+            attribute: .bottom,
+            relatedBy: .equal,
             toItem: view,
-            attribute: .Bottom,
+            attribute: .bottom,
             multiplier: 1.0,
             constant: 0.0)
 
         let leadingConstraint = NSLayoutConstraint(item: self,
-            attribute: .Leading,
-            relatedBy: .Equal,
+            attribute: .leading,
+            relatedBy: .equal,
             toItem: view,
-            attribute: .Leading,
+            attribute: .leading,
             multiplier: 1.0,
             constant: 0.0)
 
         let trailingConstraint = NSLayoutConstraint(item: self,
-            attribute: .Trailing,
-            relatedBy: .Equal,
+            attribute: .trailing,
+            relatedBy: .equal,
             toItem: view,
-            attribute: .Trailing,
+            attribute: .trailing,
             multiplier: 1.0,
             constant: 0.0)
 
@@ -80,6 +80,6 @@ internal extension UIView
             return
         }
 
-        NSLayoutConstraint.deactivateConstraints(constraints)
+        NSLayoutConstraint.deactivate(constraints)
     }
 }
