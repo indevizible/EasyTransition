@@ -36,17 +36,17 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var projectNameLabel: UILabel!
     
-    var setImageWithAnimate: (UIImage->Void)!
+    var setImageWithAnimate: ((UIImage)->Void)!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        backgroundImage.registerMotionEffectWithDept(5)
-        projectNameLabel.registerMotionEffectWithDept(30)
+        backgroundImage.registerMotionEffectWithDept(dept: 5)
+        projectNameLabel.registerMotionEffectWithDept(dept: 30)
         
         for button in actionButtons {
-            button.registerMotionEffectWithDept(10)
+            button.registerMotionEffectWithDept(dept: 10)
         }
         
         setImageWithAnimate = {
@@ -55,7 +55,7 @@ class ViewController: UIViewController {
             transition.duration = 0.2
             transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
             transition.type = kCATransitionFade
-            self.backgroundImage.layer.addAnimation(transition, forKey: nil)
+            self.backgroundImage.layer.add(transition, forKey: nil)
         }
         
     }
@@ -69,111 +69,111 @@ class ViewController: UIViewController {
     // Present from Edge
     
     @IBAction func showTop(sender: AnyObject) {
-        let menuVC = storyboard!.instantiateViewControllerWithIdentifier("menu") as! UINavigationController
+        let menuVC = storyboard!.instantiateViewController(withIdentifier: "menu") as! UINavigationController
         transition = EasyTransition(attachedViewController: menuVC)
         transition?.transitionDuration = 0.3
-        transition?.direction = .Top
-        transition?.blurEffectStyle = .Dark
+        transition?.direction = .top
+        transition?.blurEffectStyle = .dark
         transition?.margins = UIEdgeInsets(top: 100, left: 20, bottom: 100, right: 20)
         if let firstVC = menuVC.viewControllers.first as? ExampleMenuViewController {
             firstVC.imageDidSelected = setImageWithAnimate
         }
-        presentViewController(menuVC, animated: true, completion: nil)
+        present(menuVC, animated: true, completion: nil)
     }
     
     @IBAction func showRight(sender: AnyObject) {
-        let menuVC = storyboard!.instantiateViewControllerWithIdentifier("menu") as! UINavigationController
+        let menuVC = storyboard!.instantiateViewController(withIdentifier: "menu") as! UINavigationController
         transition = EasyTransition(attachedViewController: menuVC)
         transition?.transitionDuration = 0.4
-        transition?.direction = .Right
-        transition?.blurEffectStyle = .Light
+        transition?.direction = .right
+        transition?.blurEffectStyle = .light
         transition?.margins = UIEdgeInsets(top: 0, left: 100, bottom: 0, right: 0)
         if let firstVC = menuVC.viewControllers.first as? ExampleMenuViewController {
             firstVC.imageDidSelected = setImageWithAnimate
         }
-        presentViewController(menuVC, animated: true, completion: nil)
+        present(menuVC, animated: true, completion: nil)
     }
     
     @IBAction func showBottom(sender: AnyObject) {
-        let menuVC = storyboard!.instantiateViewControllerWithIdentifier("menu") as! UINavigationController
+        let menuVC = storyboard!.instantiateViewController(withIdentifier: "menu") as! UINavigationController
         transition = EasyTransition(attachedViewController: menuVC)
         transition?.transitionDuration = 0.5
-        transition?.direction = .Bottom
+        transition?.direction = .bottom
         transition?.margins = UIEdgeInsets(top: 20, left: 20, bottom: 0, right: 20)
-        transition?.sizeMax = CGSize(width: CGFloat.max, height: 200)
+        transition?.sizeMax = CGSize(width: CGFloat.greatestFiniteMagnitude, height: 200)
         if let firstVC = menuVC.viewControllers.first as? ExampleMenuViewController {
             firstVC.imageDidSelected = setImageWithAnimate
         }
-        presentViewController(menuVC, animated: true, completion: nil)
+        present(menuVC, animated: true, completion: nil)
     }
 
     @IBAction func showLeft(sender: AnyObject) {
-        let menuVC = storyboard!.instantiateViewControllerWithIdentifier("menu") as! UINavigationController
+        let menuVC = storyboard!.instantiateViewController(withIdentifier: "menu") as! UINavigationController
         transition = EasyTransition(attachedViewController: menuVC)
         transition?.transitionDuration = 0.4
-        transition?.direction = .Left
+        transition?.direction = .left
         transition?.margins = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 20)
-        transition?.sizeMax = CGSize(width: 250, height: CGFloat.max)
+        transition?.sizeMax = CGSize(width: 250, height: CGFloat.greatestFiniteMagnitude)
         transition?.zTransitionSize = 60
-        transition?.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.4)
+        transition?.backgroundColor = UIColor.black.withAlphaComponent(0.4)
         if let firstVC = menuVC.viewControllers.first as? ExampleMenuViewController {
             firstVC.imageDidSelected = setImageWithAnimate
         }
-        presentViewController(menuVC, animated: true, completion: nil)
+        present(menuVC, animated: true, completion: nil)
     }
     
     // Present from Corner
     
     @IBAction func showTopRight(sender: AnyObject) {
-        let menuVC = storyboard!.instantiateViewControllerWithIdentifier("close")
+        let menuVC = storyboard!.instantiateViewController(withIdentifier: "close")
         transition = EasyTransition(attachedViewController: menuVC)
         transition?.transitionDuration = 0.6
-        transition?.direction = [.Top,.Right]
+        transition?.direction = [.top,.right]
         transition?.margins = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 20)
         transition?.sizeMax = CGSize(width: 200, height: 200)
         transition?.backgroundColor = UIColor(patternImage: UIImage(named: "pink_rice")!)
-        presentViewController(menuVC, animated: true, completion: nil)
+        present(menuVC, animated: true, completion: nil)
     }
 
     @IBAction func showBottomRight(sender: AnyObject) {
-        let menuVC = storyboard!.instantiateViewControllerWithIdentifier("close")
+        let menuVC = storyboard!.instantiateViewController(withIdentifier: "close")
         transition = EasyTransition(attachedViewController: menuVC)
         transition?.transitionDuration = 0.4
-        transition?.direction = [.Bottom,.Right]
+        transition?.direction = [.bottom,.right]
         transition?.margins = UIEdgeInsets(top: 0, left: 0, bottom: 20, right: 20)
         transition?.sizeMax = CGSize(width: 200, height: 200)
-        transition?.backgroundColor = UIColor.redColor().colorWithAlphaComponent(0.5)
-        presentViewController(menuVC, animated: true, completion: nil)
+        transition?.backgroundColor = UIColor.red.withAlphaComponent(0.5)
+        present(menuVC, animated: true, completion: nil)
     }
     
     @IBAction func showBottomLeft(sender: AnyObject) {
-        let menuVC = storyboard!.instantiateViewControllerWithIdentifier("close")
+        let menuVC = storyboard!.instantiateViewController(withIdentifier: "close")
         transition = EasyTransition(attachedViewController: menuVC)
         transition?.transitionDuration = 0.5
-        transition?.direction = [.Bottom,.Left]
+        transition?.direction = [.bottom,.left]
         transition?.margins = UIEdgeInsets(top: 0, left: 20, bottom: 20, right: 0)
         transition?.sizeMax = CGSize(width: 200, height: 200)
-        transition?.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.6)
-        presentViewController(menuVC, animated: true, completion: nil)
+        transition?.backgroundColor = UIColor.white.withAlphaComponent(0.6)
+        present(menuVC, animated: true, completion: nil)
     }
     
     @IBAction func showTopLeft(sender: AnyObject) {
-        let menuVC = storyboard!.instantiateViewControllerWithIdentifier("close")
+        let menuVC = storyboard!.instantiateViewController(withIdentifier: "close")
         transition = EasyTransition(attachedViewController: menuVC)
         transition?.transitionDuration = 1
-        transition?.direction = [.Top,.Left]
+        transition?.direction = [.top,.left]
         transition?.margins = UIEdgeInsets(top: 20, left: 20, bottom: 0, right: 0)
         transition?.sizeMax = CGSize(width: 200, height: 200)
-        transition?.backgroundColor = UIColor.purpleColor().colorWithAlphaComponent(0.4)
-        presentViewController(menuVC, animated: true, completion: nil)
+        transition?.backgroundColor = UIColor.purple.withAlphaComponent(0.4)
+        present(menuVC, animated: true, completion: nil)
     }
 
 }
 
 extension UIView {
     func registerMotionEffectWithDept(dept:CGFloat) {
-        let effectX = UIInterpolatingMotionEffect(keyPath: "center.x", type: .TiltAlongHorizontalAxis)
-        let effectY = UIInterpolatingMotionEffect(keyPath: "center.y", type: .TiltAlongVerticalAxis)
+        let effectX = UIInterpolatingMotionEffect(keyPath: "center.x", type: .tiltAlongHorizontalAxis)
+        let effectY = UIInterpolatingMotionEffect(keyPath: "center.y", type: .tiltAlongVerticalAxis)
         effectX.maximumRelativeValue = dept
         effectX.minimumRelativeValue = -dept
         effectY.maximumRelativeValue = dept
@@ -188,27 +188,27 @@ extension UIView {
 
 class ExampleMenuViewController: UITableViewController {
     
-    var imageDidSelected: (UIImage->Void)?
+    var imageDidSelected: ((UIImage)->Void)?
     
     @IBAction func dismiss(sender: AnyObject?) {
-        guard let imageDidSelected = imageDidSelected,sender = sender as? UITableViewCell else {
-            dismissViewControllerAnimated(true, completion: nil)
+        guard let imageDidSelected = imageDidSelected,let sender = sender as? UITableViewCell else {
+            dismiss(animated: true, completion: nil)
             return
         }
-        guard let indexPath = tableView.indexPathForCell(sender) else {
-            dismissViewControllerAnimated(true, completion: nil)
+        guard let indexPath = tableView.indexPath(for: sender) else {
+            dismiss(animated: true, completion: nil)
             return
         }
             
         let imageIndex = (indexPath.section * 4) + indexPath.row + 1
         
-        dismissViewControllerAnimated(true) { () -> Void in
+        dismiss(animated: true) { () -> Void in
             imageDidSelected(UIImage(named: "bg\(imageIndex)")!)
         }
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        dismiss(tableView.cellForRowAtIndexPath(indexPath))
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        dismiss(sender: tableView.cellForRow(at: indexPath))
     }
 }
 
@@ -221,7 +221,7 @@ class ExampleViewController: UIViewController {
     }
     
     @IBAction func dismiss(sender: AnyObject?) {
-        dismissViewControllerAnimated(true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
 }
 

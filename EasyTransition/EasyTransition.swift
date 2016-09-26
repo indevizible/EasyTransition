@@ -23,42 +23,42 @@
 
 import UIKit
 
-public class EasyTransition: UIPercentDrivenInteractiveTransition {
+open class EasyTransition: UIPercentDrivenInteractiveTransition {
     
-    public var transitionDuration: NSTimeInterval = 0.5
+    open var transitionDuration: TimeInterval = 0.5
     
      // Percentage for pan dismiss [ 0.0 - 1.0]
     
-    public var dismissalPercentCompleteThreshold: CGFloat = 0.2
+    open var dismissalPercentCompleteThreshold: CGFloat = 0.2
     
-    public var enableInteractiveDismissalTransition: Bool = true
+    open var enableInteractiveDismissalTransition: Bool = true
     
-    public var enableDismissTouchOutBound: Bool = true
+    open var enableDismissTouchOutBound: Bool = true
     
-    public var isInteractiveDissmalTransition = false
+    open var isInteractiveDissmalTransition = false
     
     // direction
     // Corner or Edge only
     
-    public var direction: UIRectEdge = [.Left]
+    open var direction: UIRectEdge = [.left]
     
-    public var margins = UIEdgeInsetsZero
+    open var margins = UIEdgeInsets.zero
     
-    public var sizeMax = CGSize(width: CGFloat.max, height: CGFloat.max)
+    open var sizeMax = CGSize(width: CGFloat.greatestFiniteMagnitude, height: CGFloat.greatestFiniteMagnitude)
     
-    public var sizeMin = CGSizeZero
+    open var sizeMin = CGSize.zero
 
-    public var backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.5)
+    open var backgroundColor = UIColor.black.withAlphaComponent(0.5)
     
-    public var zTransitionSize: CGFloat?
+    open var zTransitionSize: CGFloat?
     
-    public var blurEffectStyle: UIBlurEffectStyle?
+    open var blurEffectStyle: UIBlurEffectStyle?
     
-    private var attachedViewController = UIViewController()
+    fileprivate var attachedViewController = UIViewController()
     
-    private(set) weak var transitionContext: UIViewControllerContextTransitioning?
+    fileprivate(set) weak var transitionContext: UIViewControllerContextTransitioning?
     
-    private var isPresentation : Bool = false
+    fileprivate var isPresentation : Bool = false
     
     public init(attachedViewController: UIViewController) {
         super.init()
@@ -66,63 +66,63 @@ public class EasyTransition: UIPercentDrivenInteractiveTransition {
         self.attachedViewController = attachedViewController
         
         attachedViewController.transitioningDelegate = self
-        attachedViewController.modalPresentationStyle = .Custom
+        attachedViewController.modalPresentationStyle = .custom
         
 
         let presentationPanGesture = UIPanGestureRecognizer()
-        presentationPanGesture.addTarget(self, action: "dismissalPanGesture:")
+        presentationPanGesture.addTarget(self, action: #selector(EasyTransition.dismissalPanGesture(_:)))
         attachedViewController.view.addGestureRecognizer(presentationPanGesture)
 
     }
     
-    func dismissalPanGesture(recognizer: UIPanGestureRecognizer) {
+    func dismissalPanGesture(_ recognizer: UIPanGestureRecognizer) {
         if enableInteractiveDismissalTransition {
-            isInteractiveDissmalTransition = recognizer.state == .Began || recognizer.state == .Changed
+            isInteractiveDissmalTransition = recognizer.state == .began || recognizer.state == .changed
             
             switch recognizer.state {
-            case .Began: panGestureBegan(recognizer)
-            case .Changed: panGestureChanged(recognizer)
-            case .Cancelled, .Ended: panGestureCancelledAndEnded(recognizer)
+            case .began: panGestureBegan(recognizer)
+            case .changed: panGestureChanged(recognizer)
+            case .cancelled, .ended: panGestureCancelledAndEnded(recognizer)
             default: break
             }
         }
     }
     
-    override public func cancelInteractiveTransition() {
+    override open func cancel() {
         completionSpeed = dismissalPercentCompleteThreshold
-        super.cancelInteractiveTransition()
+        super.cancel()
     }
     
-    override public func finishInteractiveTransition() {
+    override open func finish() {
         completionSpeed = 1.0 - dismissalPercentCompleteThreshold
-        super.finishInteractiveTransition()
+        super.finish()
     }
     
-    private func panGestureBegan(recognizer: UIPanGestureRecognizer) {
-        attachedViewController.dismissViewControllerAnimated(true, completion: nil)
+    fileprivate func panGestureBegan(_ recognizer: UIPanGestureRecognizer) {
+        attachedViewController.dismiss(animated: true, completion: nil)
     }
     
-    private func panGestureChanged(recognizer: UIPanGestureRecognizer) {
+    fileprivate func panGestureChanged(_ recognizer: UIPanGestureRecognizer) {
         
-        let transition = recognizer.translationInView(attachedViewController.view)
+        let transition = recognizer.translation(in: attachedViewController.view)
         
         let transitionPercentage = CGPoint(x: transition.x / attachedViewController.view.bounds.size.width, y: transition.y / attachedViewController.view.bounds.size.height)
         
-        var progress: CGPoint = CGPointZero
+        var progress: CGPoint = CGPoint.zero
         
-        if (direction.contains(.Top) && transitionPercentage.y < 0) || (direction.contains(.Bottom) && transitionPercentage.y > 0){
+        if (direction.contains(.top) && transitionPercentage.y < 0) || (direction.contains(.bottom) && transitionPercentage.y > 0){
             progress.y = transitionPercentage.y
         }
         
-        if (direction.contains(.Left) && transitionPercentage.x < 0) || (direction.contains(.Right) && transitionPercentage.x > 0){
+        if (direction.contains(.left) && transitionPercentage.x < 0) || (direction.contains(.right) && transitionPercentage.x > 0){
             progress.x = transitionPercentage.x
         }
         
-        updateInteractiveTransition(sqrt(pow(progress.x, 2) + pow(progress.y,2))) //
+        update(sqrt(pow(progress.x, 2) + pow(progress.y,2))) //
     }
     
-    private func panGestureCancelledAndEnded(recognizer: UIPanGestureRecognizer) {
-        percentComplete > dismissalPercentCompleteThreshold ? finishInteractiveTransition() : cancelInteractiveTransition()
+    fileprivate func panGestureCancelledAndEnded(_ recognizer: UIPanGestureRecognizer) {
+        percentComplete > dismissalPercentCompleteThreshold ? finish() : cancel()
     }
 }
 
@@ -130,8 +130,8 @@ extension EasyTransition : UIViewControllerTransitioningDelegate ,UIViewControll
 
     // TransitioningDelegate
     
-    public func presentationControllerForPresentedViewController(presented: UIViewController, presentingViewController presenting: UIViewController, sourceViewController source: UIViewController) -> UIPresentationController? {
-        let presentationController = PresentationController(presentedViewController:presented, presentingViewController:presenting)
+    public func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        let presentationController = PresentationController(presentedViewController:presented, presenting:presenting)
         presentationController.direction = direction
         presentationController.backgroundColor = backgroundColor
         presentationController.margins = margins
@@ -143,37 +143,37 @@ extension EasyTransition : UIViewControllerTransitioningDelegate ,UIViewControll
         return presentationController
     }
     
-    public func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         isPresentation = true
         return self
     }
     
-    public func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         isPresentation = false
         return self
     }
     
-    public func interactionControllerForPresentation(animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+    public func interactionControllerForPresentation(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
         return nil
     }
     
-    public func interactionControllerForDismissal(animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+    public func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
         return isInteractiveDissmalTransition ? self : nil
     }
     
     // Animate Transitioning
     
-    public func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
+    public func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return transitionDuration
     }
     
-    public func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
+    public func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         
         self.transitionContext = transitionContext
+        let containerView = transitionContext.containerView
         
-        guard let containerView = transitionContext.containerView(),
-            fromVC = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey),
-            toVC = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)
+        guard let fromVC = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.from),
+            let toVC = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.to)
             else {
                 return
         }
@@ -182,7 +182,7 @@ extension EasyTransition : UIViewControllerTransitioningDelegate ,UIViewControll
         let fromView = fromVC.view
         let toView = toVC.view
         
-        if toVC.isBeingPresented() {
+        if toVC.isBeingPresented {
             // Presentation
             containerView.addSubview(toView!)
         }
@@ -190,18 +190,18 @@ extension EasyTransition : UIViewControllerTransitioningDelegate ,UIViewControll
         let animatingVC = isPresentation ? toVC : fromVC
         let animatingView = animatingVC.view
         
-        let finalFrameForVC = transitionContext.finalFrameForViewController(animatingVC)
+        let finalFrameForVC = transitionContext.finalFrame(for: animatingVC)
         var initialFrameForVC = finalFrameForVC
         
-        if direction.contains(.Right) {
+        if direction.contains(.right) {
             initialFrameForVC.origin.x += (initialFrameForVC.size.width + margins.right)
-        }else if direction.contains(.Left) {
+        }else if direction.contains(.left) {
             initialFrameForVC.origin.x -= (initialFrameForVC.size.width + margins.left)
         }
         
-        if direction.contains(.Bottom) {
+        if direction.contains(.bottom) {
             initialFrameForVC.origin.y += (initialFrameForVC.size.height + margins.bottom)
-        }else if direction.contains(.Top) {
+        }else if direction.contains(.top) {
             initialFrameForVC.origin.y -= (initialFrameForVC.size.height + margins.top)
         }
         
@@ -210,24 +210,24 @@ extension EasyTransition : UIViewControllerTransitioningDelegate ,UIViewControll
         
         animatingView?.frame = initialFrame
         
-        let animations : (Void->Void) = {
+        let animations : ((Void)->Void) = {
             animatingView?.frame = finalFrame
         }
         
         let completion = { (completed:Bool) in
-            if !self.isPresentation && !transitionContext.transitionWasCancelled() {
+            if !self.isPresentation && !transitionContext.transitionWasCancelled {
                 fromView?.removeFromSuperview()
             }
-            transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
+            transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
         }
         
-        if transitionContext.isInteractive() {
-            UIView.animateWithDuration(transitionDuration(transitionContext),
+        if transitionContext.isInteractive {
+            UIView.animate(withDuration: transitionDuration(using: transitionContext),
                 animations: animations,
                 completion: completion)
         }else{
-            UIView.animateWithDuration(transitionDuration(transitionContext), delay:0, usingSpringWithDamping:500.0, initialSpringVelocity:2,
-                options:UIViewAnimationOptions.AllowUserInteraction,
+            UIView.animate(withDuration: transitionDuration(using: transitionContext), delay:0, usingSpringWithDamping:500.0, initialSpringVelocity:2,
+                options:UIViewAnimationOptions.allowUserInteraction,
                 animations:animations,
                 completion:completion)
             
@@ -241,11 +241,11 @@ internal class PresentationController: UIPresentationController, UIAdaptivePrese
     
     var backgroundColor: UIColor!
     
-    var margins = UIEdgeInsetsZero
+    var margins = UIEdgeInsets.zero
     
-    var sizeMax = CGSize(width: CGFloat.max, height: CGFloat.max)
+    var sizeMax = CGSize(width: CGFloat.greatestFiniteMagnitude, height: CGFloat.greatestFiniteMagnitude)
     
-    var sizeMin = CGSizeZero
+    var sizeMin = CGSize.zero
     
     var direction: UIRectEdge!
     
@@ -253,44 +253,44 @@ internal class PresentationController: UIPresentationController, UIAdaptivePrese
     
     var blurEffectStyle: UIBlurEffectStyle?
     
-    private var installedConstraint: [NSLayoutConstraint]?
+    fileprivate var installedConstraint: [NSLayoutConstraint]?
     
-    private var dimmingView: UIView! {
+    fileprivate var dimmingView: UIView! {
         didSet {
-            dimmingView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "dimmingViewTapped:"))
+            dimmingView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(PresentationController.dimmingViewTapped(_:))))
         }
     }
     
-    private var backView: UIView?
+    fileprivate var backView: UIView?
     
-    private var snapshotView: UIView?
+    fileprivate var snapshotView: UIView?
     
-    private var perspectiveTransform: CATransform3D?
+    fileprivate var perspectiveTransform: CATransform3D?
     
     var enableDismissTouchOutBound:Bool = true
     
-    func dimmingViewTapped(gesture: UIGestureRecognizer) {
-        if gesture.state == UIGestureRecognizerState.Ended  && enableDismissTouchOutBound {
-            presentingViewController.dismissViewControllerAnimated(true, completion: nil)
+    func dimmingViewTapped(_ gesture: UIGestureRecognizer) {
+        if gesture.state == UIGestureRecognizerState.ended  && enableDismissTouchOutBound {
+            presentingViewController.dismiss(animated: true, completion: nil)
         }
     }
     
-    internal override func frameOfPresentedViewInContainerView() -> CGRect {
-        var presentedViewFrame = CGRectZero
+    internal override var frameOfPresentedViewInContainerView : CGRect {
+        var presentedViewFrame = CGRect.zero
         if let containerBounds = containerView?.bounds {
-            presentedViewFrame.size = sizeForChildContentContainer(presentedViewController, withParentContainerSize: containerBounds.size)
+            presentedViewFrame.size = size(forChildContentContainer: presentedViewController, withParentContainerSize: containerBounds.size)
             presentedViewFrame.origin = CGPoint(x: margins.left, y: margins.top)
-            if direction.contains(.Bottom) {
+            if direction.contains(.bottom) {
                 presentedViewFrame.origin.y += (containerBounds.height - (margins.top + margins.bottom)) - presentedViewFrame.height
             }
-            if direction.contains(.Right) {
+            if direction.contains(.right) {
                 presentedViewFrame.origin.x += (containerBounds.width - (margins.left + margins.right)) - presentedViewFrame.width
             }
         }
         return presentedViewFrame
     }
     
-    internal override func sizeForChildContentContainer(container: UIContentContainer, withParentContainerSize parentSize: CGSize) -> CGSize {
+    internal override func size(forChildContentContainer container: UIContentContainer, withParentContainerSize parentSize: CGSize) -> CGSize {
         return CGSize(
             width:  max(min(parentSize.width - (margins.left + margins.right)   ,sizeMax.width),sizeMin.width),
             height: max(min(parentSize.height - (margins.top + margins.bottom)  ,sizeMax.height),sizeMin.height)
@@ -308,7 +308,7 @@ internal class PresentationController: UIPresentationController, UIAdaptivePrese
             dimmingView.alpha = 0.0
         }
         
-        containerView.insertSubview(dimmingView, atIndex:1)
+        containerView.insertSubview(dimmingView, at:1)
         
         if let zTransitionSize = zTransitionSize {
             let backView = UIView()
@@ -331,10 +331,10 @@ internal class PresentationController: UIPresentationController, UIAdaptivePrese
         
         
         
-        if let coordinator = presentedViewController.transitionCoordinator() {
-            coordinator.animateAlongsideTransition({
+        if let coordinator = presentedViewController.transitionCoordinator {
+            coordinator.animate(alongsideTransition: {
                 (context:UIViewControllerTransitionCoordinatorContext) -> Void in
-                if let blurView = self.dimmingView as? UIVisualEffectView , blurEffect = self.blurEffectStyle {
+                if let blurView = self.dimmingView as? UIVisualEffectView , let blurEffect = self.blurEffectStyle {
                     blurView.effect = UIBlurEffect(style: blurEffect)
                 }else{
                     self.dimmingView.alpha = 1.0
@@ -353,12 +353,12 @@ internal class PresentationController: UIPresentationController, UIAdaptivePrese
     
     internal override func dismissalTransitionWillBegin() {
         
-        if let coordinator = presentedViewController.transitionCoordinator() {
+        if let coordinator = presentedViewController.transitionCoordinator {
             if let snapshotView = snapshotView {
-                coordinator.animateAlongsideTransitionInView(snapshotView, animation: {transitionContext in
+                coordinator.animateAlongsideTransition(in: snapshotView, animation: {transitionContext in
                     self.snapshotView?.layer.transform = CATransform3DIdentity
                     }, completion: { transitionContext in
-                        if transitionContext.isCancelled() {
+                        if transitionContext.isCancelled {
                             if let perspectiveTransform = self.perspectiveTransform {
                                 self.snapshotView?.layer.transform = perspectiveTransform
                             }
@@ -369,7 +369,7 @@ internal class PresentationController: UIPresentationController, UIAdaptivePrese
                 })
             }
             
-            coordinator.animateAlongsideTransition({
+            coordinator.animate(alongsideTransition: {
                 (context:UIViewControllerTransitionCoordinatorContext) -> Void in
                 if let blurView = self.dimmingView as? UIVisualEffectView {
                     blurView.effect = nil
@@ -377,7 +377,7 @@ internal class PresentationController: UIPresentationController, UIAdaptivePrese
                     self.dimmingView.alpha = 0.0
                 }
             }, completion: { context in
-                    if context.isCancelled(), let blurEffect = self.blurEffectStyle,
+                    if context.isCancelled, let blurEffect = self.blurEffectStyle,
                         let blurView = self.dimmingView as? UIVisualEffectView {
                             blurView.effect = UIBlurEffect(style: blurEffect)
                     }
@@ -391,15 +391,15 @@ internal class PresentationController: UIPresentationController, UIAdaptivePrese
     internal override func containerViewWillLayoutSubviews() {
         guard let containerView = containerView else {return}
         dimmingView.frame = containerView.bounds
-        presentedView()?.frame = frameOfPresentedViewInContainerView()
+        presentedView?.frame = frameOfPresentedViewInContainerView
     }
     
-    internal override func shouldPresentInFullscreen() -> Bool {
+    internal override var shouldPresentInFullscreen : Bool {
         return true
     }
     
-    internal override func adaptivePresentationStyle() -> UIModalPresentationStyle {
-        return UIModalPresentationStyle.FullScreen
+    internal override var adaptivePresentationStyle : UIModalPresentationStyle {
+        return UIModalPresentationStyle.fullScreen
     }
 }
 

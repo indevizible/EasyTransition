@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A320" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--IMAGES-->
@@ -11,28 +12,28 @@
             <objects>
                 <tableViewController id="qz0-Xd-rZr" customClass="ExampleMenuViewController" customModule="EasyTransitionExample" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="2zB-Bp-UIN">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
                             <tableViewSection headerTitle="Places" id="UQV-zt-bk4">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="KRn-9I-IkH" detailTextLabel="bIH-kL-lLX" style="IBUITableViewCellStyleSubtitle" id="QNL-ya-ot0">
-                                        <rect key="frame" x="0.0" y="114" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="120" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QNL-ya-ot0" id="QsY-UO-Ctm">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <frame key="frameInset" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Shore" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KRn-9I-IkH">
-                                                    <rect key="frame" x="15" y="5" width="43" height="20"/>
+                                                    <frame key="frameInset" minX="15" minY="5" width="43" height="20"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Stefanus Martanto Setyo Husodo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bIH-kL-lLX">
-                                                    <rect key="frame" x="15" y="25" width="174" height="14"/>
+                                                    <frame key="frameInset" minX="15" minY="25" width="174" height="14"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -42,21 +43,21 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="Evm-EO-nvv" detailTextLabel="a52-Ty-Fcb" style="IBUITableViewCellStyleSubtitle" id="TLo-A9-Hm3">
-                                        <rect key="frame" x="0.0" y="158" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="164" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TLo-A9-Hm3" id="bJd-WP-pYb">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <frame key="frameInset" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Chaldon Herring, United Kingdom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Evm-EO-nvv">
-                                                    <rect key="frame" x="15" y="5" width="245" height="20"/>
+                                                    <frame key="frameInset" minX="15" minY="5" width="245" height="20"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Rob Bye" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="a52-Ty-Fcb">
-                                                    <rect key="frame" x="15" y="25" width="44" height="14"/>
+                                                    <frame key="frameInset" minX="15" minY="25" width="44" height="14"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -66,21 +67,21 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="YMH-Jy-VEd" detailTextLabel="cmm-lH-JSZ" style="IBUITableViewCellStyleSubtitle" id="7QT-J3-0cP">
-                                        <rect key="frame" x="0.0" y="202" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="208" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7QT-J3-0cP" id="eJw-q0-eWg">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <frame key="frameInset" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Shivaji Park, Mumbai, India" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YMH-Jy-VEd">
-                                                    <rect key="frame" x="15" y="5" width="193" height="20"/>
+                                                    <frame key="frameInset" minX="15" minY="5" width="193" height="20"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Nitish Kadam" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cmm-lH-JSZ">
-                                                    <rect key="frame" x="15" y="25" width="70" height="14"/>
+                                                    <frame key="frameInset" minX="15" minY="25" width="70" height="14"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -90,21 +91,21 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="fb6-SP-wx8" detailTextLabel="1rC-nV-KLj" style="IBUITableViewCellStyleSubtitle" id="F5Y-mZ-CFQ">
-                                        <rect key="frame" x="0.0" y="246" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="252" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="F5Y-mZ-CFQ" id="URg-qf-aOg">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <frame key="frameInset" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Bad Pyrmont, Deutshland" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fb6-SP-wx8">
-                                                    <rect key="frame" x="15" y="5" width="186" height="20"/>
+                                                    <frame key="frameInset" minX="15" minY="5" width="186" height="20"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Sebastian Unrau" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1rC-nV-KLj">
-                                                    <rect key="frame" x="15" y="25" width="87" height="14"/>
+                                                    <frame key="frameInset" minX="15" minY="25" width="87" height="14"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -118,21 +119,21 @@
                             <tableViewSection headerTitle="Other" id="JLh-nS-CQz">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="Lke-No-Eac" detailTextLabel="PZg-eM-YDh" style="IBUITableViewCellStyleSubtitle" id="cEC-EJ-3yh">
-                                        <rect key="frame" x="0.0" y="341" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="353" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cEC-EJ-3yh" id="RXG-mc-BsU">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <frame key="frameInset" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Tulip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Lke-No-Eac">
-                                                    <rect key="frame" x="15" y="5" width="35" height="20"/>
+                                                    <frame key="frameInset" minX="15" minY="5" width="35" height="20"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Leigh Kendell" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PZg-eM-YDh">
-                                                    <rect key="frame" x="15" y="25" width="71" height="14"/>
+                                                    <frame key="frameInset" minX="15" minY="25" width="71" height="14"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -142,21 +143,21 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="ocD-5P-sgJ" detailTextLabel="Hgs-yO-sQP" style="IBUITableViewCellStyleSubtitle" id="n0y-AH-ZrZ">
-                                        <rect key="frame" x="0.0" y="385" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="397" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="n0y-AH-ZrZ" id="mcj-bm-T6z">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <frame key="frameInset" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Rim light" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ocD-5P-sgJ">
-                                                    <rect key="frame" x="15" y="5" width="64" height="20"/>
+                                                    <frame key="frameInset" minX="15" minY="5" width="64" height="20"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Julia Caesar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Hgs-yO-sQP">
-                                                    <rect key="frame" x="15" y="25" width="65" height="14"/>
+                                                    <frame key="frameInset" minX="15" minY="25" width="65" height="14"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -166,21 +167,21 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="Dby-Oj-0QW" detailTextLabel="sBV-pT-Fih" style="IBUITableViewCellStyleSubtitle" id="uiU-hj-mEs">
-                                        <rect key="frame" x="0.0" y="429" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="441" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uiU-hj-mEs" id="uJJ-wc-8vd">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <frame key="frameInset" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Desk" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Dby-Oj-0QW">
-                                                    <rect key="frame" x="15" y="5" width="37" height="20"/>
+                                                    <frame key="frameInset" minX="15" minY="5" width="37" height="20"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Jeff Sheldon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sBV-pT-Fih">
-                                                    <rect key="frame" x="15" y="25" width="67" height="14"/>
+                                                    <frame key="frameInset" minX="15" minY="25" width="67" height="14"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -199,9 +200,9 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="IMAGES" id="7aW-t7-CQT">
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="AH4-Kw-mUg">
-                            <color key="tintColor" red="0.6588235294" green="0.24313725489999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="tintColor" red="0.6588235294" green="0.24313725489999999" blue="0.24313725489999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <action selector="dismiss:" destination="qz0-Xd-rZr" id="ocl-bi-KbK"/>
+                                <action selector="dismissWithSender:" destination="qz0-Xd-rZr" id="xkN-9O-yHp"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -219,136 +220,125 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg1" translatesAutoresizingMaskIntoConstraints="NO" id="5h5-cx-q6n">
-                                <rect key="frame" x="-20" y="-20" width="640" height="640"/>
-                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg1" translatesAutoresizingMaskIntoConstraints="NO" id="5h5-cx-q6n"/>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SdC-AW-b6J">
-                                <rect key="frame" x="281" y="562" width="38" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="38" id="AAm-d2-jTK"/>
                                     <constraint firstAttribute="height" constant="30" id="eFB-H8-19K"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="Show">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="showBottom:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lbp-hQ-FiH"/>
+                                    <action selector="showBottomWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FEy-Mb-CCc"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vi1-gS-kjQ">
-                                <rect key="frame" x="542" y="562" width="38" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="38" id="KsX-mw-NSb"/>
                                     <constraint firstAttribute="height" constant="30" id="f38-pS-8gt"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="Show">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="showBottomRight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jbx-SH-Feg"/>
+                                    <action selector="showBottomRightWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S21-pq-cGe"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wat-4k-Q6K">
-                                <rect key="frame" x="542" y="285" width="38" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="57u-IU-kf0"/>
                                     <constraint firstAttribute="width" constant="38" id="Y7L-JW-lQT"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="Show">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="showRight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OT0-iW-IIs"/>
+                                    <action selector="showRightWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OHc-P8-BpC"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wKA-xh-p0r">
-                                <rect key="frame" x="542" y="20" width="38" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="38" id="ICs-yC-LKZ"/>
                                     <constraint firstAttribute="height" constant="30" id="lVU-d9-6jt"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="Show">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="showTopRight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3NY-ZZ-QPO"/>
+                                    <action selector="showTopRightWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OOg-nH-9nX"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cAU-pq-aps">
-                                <rect key="frame" x="20" y="285" width="38" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="38" id="RSp-7V-rAJ"/>
                                     <constraint firstAttribute="height" constant="30" id="ayw-UZ-ZBb"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="Show">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="showLeft:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VuZ-rT-BD6"/>
+                                    <action selector="showLeftWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZFg-NO-ego"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wTf-NV-QEp">
-                                <rect key="frame" x="20" y="562" width="38" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="BCf-6h-Oly"/>
                                     <constraint firstAttribute="width" constant="38" id="XbO-27-2El"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="Show">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="showBottomLeft:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PET-9A-dWO"/>
+                                    <action selector="showBottomLeftWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3qO-eQ-79j"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EasyTransition" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dLK-U3-hnk">
-                                <rect key="frame" x="197" y="267" width="206" height="66"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="206" id="UcQ-4B-Yqr"/>
                                     <constraint firstAttribute="height" constant="66" id="oeF-pz-FcA"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="30"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FTY-mY-v5z">
-                                <rect key="frame" x="20" y="20" width="38" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="onh-ZU-zf8"/>
                                     <constraint firstAttribute="width" constant="38" id="vov-JW-CtR"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="Show">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="showTopLeft:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U5P-IW-D8Y"/>
+                                    <action selector="showTopLeftWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lWz-Q4-Zgw"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="12u-Qn-bfw">
-                                <rect key="frame" x="281" y="20" width="38" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="MNe-nQ-LCc"/>
                                     <constraint firstAttribute="width" constant="38" id="rhC-9J-FTy"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="Show">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="showTop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zOh-Po-ZOg"/>
+                                    <action selector="showTopWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hTO-jv-Utf"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vi1-gS-kjQ" secondAttribute="bottom" constant="8" id="1Ev-Ld-crc"/>
                             <constraint firstItem="Wat-4k-Q6K" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1uy-lG-SOZ"/>
@@ -401,20 +391,19 @@
                         <viewControllerLayoutGuide type="bottom" id="cFg-d4-Qhy"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Muy-HX-glm">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2aE-q8-voJ">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <state key="normal" title="Close">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="dismiss:" destination="xdn-3I-goh" eventType="touchUpInside" id="Z5C-gI-XZ9"/>
+                                    <action selector="dismissWithSender:" destination="xdn-3I-goh" eventType="touchUpInside" id="mQx-7e-cF4"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.6588235294" green="0.24313725489999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.6588235294" green="0.24313725489999999" blue="0.24313725489999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="2aE-q8-voJ" firstAttribute="top" secondItem="Muy-HX-glm" secondAttribute="top" id="0ju-ho-VAL"/>
                             <constraint firstItem="2aE-q8-voJ" firstAttribute="leading" secondItem="Muy-HX-glm" secondAttribute="leading" id="19V-t0-yhq"/>
