@@ -25,7 +25,7 @@ EasyTransition is a simple library for make a transition in iOS.
 
 ## Requirements
 - Swift 2+ (use v.1.2)
-- Swift 3 (2.0)
+- Swift 3 (2.1)
 - iOS 8.3+
 
 ##  Installation
@@ -50,7 +50,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
 use_frameworks!
 
-pod 'EasyTransition', '~> 2.0'
+pod 'EasyTransition', '~> 2.1'
 ```
 
 Then, run the following command:
@@ -73,7 +73,7 @@ $ brew install carthage
 To integrate EasyTransition into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "indevizible/EasyTransition" ~> 2.0
+github "indevizible/EasyTransition" ~> 2.1
 ```
 
 Run `carthage update` to build the framework and drag the built `EasyTransition.framework` into your Xcode project.
