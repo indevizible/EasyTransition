@@ -40,7 +40,7 @@ open class EasyTransition: UIPercentDrivenInteractiveTransition {
     // direction
     // Corner or Edge only
     
-    open var direction: UIRectEdge = [.left]
+    open var direction: UIRectEdge = .left
     
     open var margins = UIEdgeInsets.zero
     
@@ -75,7 +75,7 @@ open class EasyTransition: UIPercentDrivenInteractiveTransition {
 
     }
     
-    func dismissalPanGesture(_ recognizer: UIPanGestureRecognizer) {
+    @objc func dismissalPanGesture(_ recognizer: UIPanGestureRecognizer) {
         if enableInteractiveDismissalTransition {
             isInteractiveDissmalTransition = recognizer.state == .began || recognizer.state == .changed
             
@@ -210,11 +210,11 @@ extension EasyTransition : UIViewControllerTransitioningDelegate ,UIViewControll
         
         animatingView?.frame = initialFrame
         
-        let animations : ((Void)->Void) = {
+        let animations: (()->Void) = {
             animatingView?.frame = finalFrame
         }
         
-        let completion = { (completed:Bool) in
+        let completion = { (completed: Bool) in
             if !self.isPresentation && !transitionContext.transitionWasCancelled {
                 fromView?.removeFromSuperview()
             }
@@ -269,7 +269,7 @@ internal class PresentationController: UIPresentationController, UIAdaptivePrese
     
     var enableDismissTouchOutBound:Bool = true
     
-    func dimmingViewTapped(_ gesture: UIGestureRecognizer) {
+    @objc func dimmingViewTapped(_ gesture: UIGestureRecognizer) {
         if gesture.state == UIGestureRecognizerState.ended  && enableDismissTouchOutBound {
             presentingViewController.dismiss(animated: true, completion: nil)
         }
